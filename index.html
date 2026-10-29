@@ -1,168 +1,88 @@
 <!DOCTYPE html>
-<html lang="bn">
+<html>
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Gaming Tips BD - Final</title>
-<script src="https://cdn.tailwindcss.com"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@500;700&display=swap');
-body{font-family:'Hind Siliguri',sans-serif;background:#0a0a0a;}
-.scroll-hide::-webkit-scrollbar{display:none}
-.card{transition:0.2s} .card:active{transform:scale(0.97)}
-</style>
+<title>GAMING TIPS BD MEGA MALL - FINAL ONE FILE</title>
 </head>
-<body class="text-white pb-20">
-<!-- Header -->
-<header class="sticky top-0 z-50 bg-black/90 backdrop-blur border-b-2 border-yellow-400 p-3">
-<div class="max-w-5xl mx-auto flex justify-between items-center">
-<div class="flex items-center gap-2">
-<i class="fa-solid fa-gamepad text-yellow-400 text-2xl"></i>
-<h1 class="text-xl font-bold">GAMING <span class="text-yellow-400">TIPS BD</span></h1>
-</div>
-<button onclick="document.getElementById('uploadModal').classList.remove('hidden')" class="bg-yellow-400 text-black px-4 py-2 rounded-full font-bold text-sm"><i class="fa-solid fa-plus"></i> আপলোড</button>
-</div>
-<div class="max-w-5xl mx-auto mt-3 flex gap-2">
-<input id="search" oninput="render()" placeholder="🔍 Search tips, Free Fire, PUBG..." class="w-full bg-zinc-900 border border-zinc-700 rounded-full px-4 py-2 text-sm outline-none focus:border-yellow-400">
-</div>
-<div class="max-w-5xl mx-auto mt-3 flex gap-2 overflow-x-auto scroll-hide pb-1">
-<button onclick="setCat('all')" class="catBtn bg-yellow-400 text-black px-4 py-1.5 rounded-full text-sm font-bold whitespace-nowrap" data-cat="all">সব</button>
-<button onclick="setCat('freefire')" class="catBtn bg-zinc-800 px-4 py-1.5 rounded-full text-sm whitespace-nowrap" data-cat="freefire">Free Fire</button>
-<button onclick="setCat('pubg')" class="catBtn bg-zinc-800 px-4 py-1.5 rounded-full text-sm whitespace-nowrap" data-cat="pubg">PUBG</button>
-<button onclick="setCat('tips')" class="catBtn bg-zinc-800 px-4 py-1.5 rounded-full text-sm whitespace-nowrap" data-cat="tips">Tips & Tricks</button>
-<button onclick="setCat('meme')" class="catBtn bg-zinc-800 px-4 py-1.5 rounded-full text-sm whitespace-nowrap" data-cat="meme">Meme</button>
-</div>
-</header>
+<body style="margin:0; padding:10px; background:#f2f2f2; font-family:Arial;">
 
-<!-- Stats -->
-<div class="max-w-5xl mx-auto p-3 grid grid-cols-3 gap-2">
-<div class="bg-zinc-900 rounded-xl p-3 text-center border border-zinc-800"><p class="text-yellow-400 font-bold text-lg" id="totalCount">0</p><p class="text-xs text-zinc-400">মোট ছবি</p></div>
-<div class="bg-zinc-900 rounded-xl p-3 text-center border border-zinc-800"><p class="text-green-400 font-bold text-lg">ছবি Only</p><p class="text-xs text-zinc-400">ভিডিও বন্ধ</p></div>
-<div class="bg-zinc-900 rounded-xl p-3 text-center border border-zinc-800"><p class="text-blue-400 font-bold text-lg"><i class="fa-solid fa-users"></i> BD</p><p class="text-xs text-zinc-400">Community</p></div>
+<!-- 1. LOGO -->
+<div style="text-align:center; background:white; padding:20px; border-radius:20px; border:2px solid #FF7A00;">
+<img src="YOUR_LOGO_LINK" style="width:120px; border-radius:25px;"/>
+<h1 style="color:#FF7A00; margin:5px 0 0 0;">GAMING TIPS BD</h1>
+<h2 style="color:#0E4DA4; margin:0;">MEGA MALL</h2>
 </div>
 
-<!-- Gallery -->
-<div class="max-w-5xl mx-auto p-3">
-<div id="gallery" class="grid grid-cols-2 md:grid-cols-3 gap-3"></div>
-<p id="empty" class="hidden text-center text-zinc-500 mt-20">কোনো ছবি পাওয়া যায়নি<br>প্রথম ছবি আপনি আপলোড করুন!</p>
+<!-- 2. SIGN UP + GENDER LOCK -->
+<div style="background:white; padding:15px; border-radius:15px; margin-top:15px;">
+<h3>📱 Sign Up</h3>
+<input type="text" placeholder="নাম" style="width:95%; padding:12px; margin:5px 0; border-radius:10px; border:1px solid #ddd;"/>
+<input type="text" placeholder="ফোন" style="width:95%; padding:12px; margin:5px 0; border-radius:10px; border:1px solid #ddd;"/>
+<select style="width:100%; padding:12px; margin:5px 0; border-radius:10px;"><option>👦 ছেলে</option><option>👧 মেয়ে</option></select>
+<button style="background:linear-gradient(45deg, #FF7A00, #0E4DA4); color:white; width:100%; padding:12px; border-radius:20px; border:none; font-weight:bold;">Sign Up</button>
+<p style="font-size:10px; color:red; text-align:center;">ছেলে মেয়ের জায়গায় যেতে পারবে না - হার্ড লক</p>
 </div>
 
-<!-- Upload Modal -->
-<div id="uploadModal" class="hidden fixed inset-0 bg-black/80 z-[100] flex items-center justify-center p-4">
-<div class="bg-zinc-900 w-full max-w-md rounded-2xl p-5 border border-yellow-400/50">
-<div class="flex justify-between items-center mb-4">
-<h2 class="font-bold text-lg">📸 নতুন ছবি ছাড়ুন</h2>
-<button onclick="document.getElementById('uploadModal').classList.add('hidden')" class="bg-zinc-800 w-8 h-8 rounded-full"><i class="fa-solid fa-xmark"></i></button>
-</div>
-<input type="file" id="file" accept="image/jpeg,image/png,image/webp,image/jpg" class="hidden">
-<div id="drop" onclick="document.getElementById('file').click()" class="border-2 border-dashed border-yellow-400/50 rounded-xl p-6 text-center cursor-pointer bg-black/50">
-<div id="previewWrap" class="hidden"><img id="preview" class="w-full h-40 object-cover rounded-xl mb-2"><p id="fileName" class="text-xs text-zinc-400"></p></div>
-<div id="dropText"><i class="fa-solid fa-cloud-arrow-up text-3xl text-yellow-400"></i><p class="mt-2 text-sm font-bold">ছবি সিলেক্ট করুন</p><p class="text-xs text-zinc-500 mt-1">JPG, PNG, WEBP only - Max 5MB<br>ভিডিও Allow না</p></div>
-</div>
-<p id="err" class="text-red-400 text-xs mt-2 text-center"></p>
-<input id="title" placeholder="টাইটেল লিখুন (যেমন: Free Fire Best Headshot)" class="w-full bg-black border border-zinc-700 rounded-xl px-4 py-3 mt-3 text-sm outline-none focus:border-yellow-400">
-<div class="grid grid-cols-2 gap-2 mt-3">
-<select id="cat" class="bg-black border border-zinc-700 rounded-xl px-3 py-3 text-sm outline-none"><option value="freefire">Free Fire</option><option value="pubg">PUBG</option><option value="tips">Tips</option><option value="meme">Meme</option></select>
-<input id="price" type="number" placeholder="দাম (৳) - ফ্রি হলে 0" class="bg-black border border-zinc-700 rounded-xl px-3 py-3 text-sm outline-none">
-</div>
-<button id="postBtn" class="w-full bg-yellow-400 text-black font-bold py-3 rounded-xl mt-4"><i class="fa-solid fa-rocket"></i> পোস্ট করুন</button>
-</div>
+<!-- 3. ছবি আপলোড -->
+<div style="display:flex; gap:10px; margin-top:15px;">
+<button style="flex:1; background:#0E4DA4; color:white; padding:12px; border-radius:20px; border:none;">👦 ছেলে ছবি</button>
+<button style="flex:1; background:#FF4081; color:white; padding:12px; border-radius:20px; border:none;">👧 মেয়ে ছবি</button>
 </div>
 
-<script>
-let posts = JSON.parse(localStorage.getItem('gtbd_posts') || '[]');
-let currentCat = 'all';
-let selectedFileData = null;
+<!-- 4. LIKE COMMENT INCOME -->
+<div style="background:white; padding:10px; border-radius:10px; margin-top:10px; text-align:center; font-size:12px;">
+❤️ Like 0.10৳ | 💬 Comment 0.20৳ | Share 0.50৳ | View 1৳<br/>
+<span style="color:green;">User 60% | Admin 40%</span>
+</div>
 
-if(posts.length===0){
- posts = [
-  {id:1,title:'Free Fire Headshot Trick 100% Working',cat:'freefire',price:0,likes:124,img:'https://i.imgur.com/8Km9tLL.png',time:'2h ago'},
-  {id:2,title:'PUBG Mobile Best Sensitivity',cat:'pubg',price:50,likes:89,img:'https://i.imgur.com/Q6a5kRD.png',time:'5h ago'},
- ];
-}
+<!-- 5. MINI GAMES -->
+<h3 style="color:#FF7A00;">🎮 ছোট গেম</h3>
+<div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:8px; text-align:center;">
+<div style="background:white; padding:15px; border-radius:10px;">🐦 Flappy<br/><button style="background:#FF7A00; color:white; border:none; padding:3px 10px; border-radius:10px;">Play</button></div>
+<div style="background:white; padding:15px; border-radius:10px;">🐍 Snake<br/><button style="background:#0E4DA4; color:white; border:none; padding:3px 10px; border-radius:10px;">Play</button></div>
+<div style="background:white; padding:15px; border-radius:10px;">🏎️ Car<br/><button style="background:#4CAF50; color:white; border:none; padding:3px 10px; border-radius:10px;">Play</button></div>
+<div style="background:white; padding:15px; border-radius:10px;">🎲 Ludo<br/><button style="background:#9C27B0; color:white; border:none; padding:3px 10px; border-radius:10px;">Play</button></div>
+<div style="background:white; padding:15px; border-radius:10px;">🧩 Puzzle<br/><button style="background:#FF4081; color:white; border:none; padding:3px 10px; border-radius:10px;">Play</button></div>
+<div style="background:white; padding:15px; border-radius:10px;">⚽ Football<br/><button style="background:#00BCD4; color:white; border:none; padding:3px 10px; border-radius:10px;">Play</button></div>
+</div>
 
-function setCat(c){
- currentCat=c;
- document.querySelectorAll('.catBtn').forEach(b=>{
-  b.className = b.dataset.cat===c ? 'catBtn bg-yellow-400 text-black px-4 py-1.5 rounded-full text-sm font-bold whitespace-nowrap' : 'catBtn bg-zinc-800 px-4 py-1.5 rounded-full text-sm whitespace-nowrap';
- });
- render();
-}
+<!-- 6. ADS + SHOPPING -->
+<div style="background:#FFD700; padding:10px; text-align:center; border-radius:10px; margin-top:15px;">📺 AdMob Banner Ad - এখানে অ্যাড আসবে - 5 Coin</div>
+<div style="display:grid; grid-template-columns:1fr 1fr; gap:8px; margin-top:10px;">
+<div style="background:white; border-radius:10px; padding:10px; text-align:center;">🎧 হেডফোন<br/><b>৳850</b><br/><button style="background:#FF7A00; color:white; border:none; padding:5px 10px; border-radius:10px;">Buy</button></div>
+<div style="background:white; border-radius:10px; padding:10px; text-align:center;">👕 জার্সি<br/><b>৳450</b><br/><button style="background:#0E4DA4; color:white; border:none; padding:5px 10px; border-radius:10px;">Buy</button></div>
+</div>
 
-const fileInput=document.getElementById('file');
-fileInput.addEventListener('change', e=>{
- const file=e.target.files[0];
- const err=document.getElementById('err');
- err.textContent='';
- if(!file) return;
- if(!file.type.startsWith('image/')){
-  err.textContent='❌ ভাই, শুধু ছবি দেওয়া যাবে, ভিডিও না!';
-  fileInput.value=''; return;
- }
- if(file.size>5*1024*1024){
-  err.textContent='❌ ছবি 5MB এর বেশি হবে না';
-  fileInput.value=''; return;
- }
- const reader=new FileReader();
- reader.onload=ev=>{
-  selectedFileData=ev.target.result;
-  document.getElementById('preview').src=selectedFileData;
-  document.getElementById('fileName').textContent=file.name;
-  document.getElementById('previewWrap').classList.remove('hidden');
-  document.getElementById('dropText').classList.add('hidden');
- }
- reader.readAsDataURL(file);
-});
+<!-- 7. REFER + WALLET -->
+<div style="background:linear-gradient(45deg, #FF7A00, #FF4081); padding:15px; border-radius:15px; color:white; text-align:center; margin-top:15px;">
+<h3>👥 Refer - 20৳</h3><button style="background:white; color:#FF7A00; padding:8px 15px; border-radius:20px; border:none;">Copy Link</button>
+</div>
+<div style="background:white; border:2px solid #0E4DA4; padding:15px; border-radius:15px; text-align:center; margin-top:10px;">
+<h3>💰 Wallet ৳500</h3>
+<button style="background:#E2136E; color:white; padding:8px 15px; border-radius:10px; border:none;">bKash</button>
+<button style="background:#F6921E; color:white; padding:8px 15px; border-radius:10px; border:none;">Nagad</button>
+<button style="background:#0E4DA4; color:white; padding:8px 15px; border-radius:10px; border:none;">PayPal</button>
+</div>
 
-document.getElementById('postBtn').addEventListener('click', ()=>{
- const title=document.getElementById('title').value.trim();
- const cat=document.getElementById('cat').value;
- const price=document.getElementById('price').value||0;
- const err=document.getElementById('err');
- if(!selectedFileData){err.textContent='প্রথমে ছবি সিলেক্ট করুন ভাই!'; return;}
- if(!title){err.textContent='টাইটেল লিখুন!'; return;}
- posts.unshift({id:Date.now(),title,cat,price:parseInt(price),likes:0,img:selectedFileData,time:'Just now'});
- localStorage.setItem('gtbd_posts',JSON.stringify(posts));
- selectedFileData=null; fileInput.value=''; document.getElementById('title').value=''; document.getElementById('price').value='';
- document.getElementById('previewWrap').classList.add('hidden'); document.getElementById('dropText').classList.remove('hidden');
- document.getElementById('uploadModal').classList.add('hidden');
- render();
-});
+<!-- 8. FOLLOWER + BLUE TICK + VIP + TOURNAMENT -->
+<div style="background:white; border:1px solid #1877F2; padding:12px; border-radius:15px; margin-top:10px; text-align:center;"><h3 style="color:#1877F2;">📈 1000 Follower ৳500</h3><button style="background:#1877F2; color:white; border:none; padding:8px 20px; border-radius:20px;">Order</button></div>
+<div style="background:#E3F2FD; padding:12px; border-radius:15px; text-align:center; margin-top:10px;"><h3>✅ Blue Tick ৳100</h3><button style="background:#0E4DA4; color:white; border:none; padding:8px 20px; border-radius:20px;">Buy</button></div>
+<div style="background:#111; color:white; padding:12px; border-radius:15px; text-align:center; margin-top:10px; border:2px solid #FFD700;"><h3 style="color:#FFD700;">👑 VIP ৳200/Month</h3><button style="background:#FFD700; color:black; border:none; padding:8px 20px; border-radius:20px;">VIP</button></div>
+<div style="background:white; border:2px solid #FF7A00; padding:12px; border-radius:15px; margin-top:10px; text-align:center;"><h3 style="color:#FF7A00;">🏆 Tournament Entry 50৳ Win 1000৳</h3><button style="background:#FF7A00; color:white; border:none; padding:8px 20px; border-radius:20px;">Join</button></div>
 
-function render(){
- const q=document.getElementById('search').value.toLowerCase();
- const gallery=document.getElementById('gallery');
- const filtered=posts.filter(p=>{
-  const matchCat=currentCat==='all'||p.cat===currentCat;
-  const matchSearch=p.title.toLowerCase().includes(q);
-  return matchCat && matchSearch;
- });
- gallery.innerHTML='';
- document.getElementById('totalCount').textContent=posts.length;
- if(filtered.length===0){document.getElementById('empty').classList.remove('hidden'); return;}
- document.getElementById('empty').classList.add('hidden');
- filtered.forEach(p=>{
-  const div=document.createElement('div');
-  div.className='card bg-zinc-900 rounded-2xl overflow-hidden border border-zinc-800';
-  div.innerHTML=`
-   <div class="relative"><img src="${p.img}" class="w-full h-44 object-cover">
-   <span class="absolute top-2 left-2 bg-black/80 text-[10px] px-2 py-1 rounded-full uppercase">${p.cat}</span>
-   <button onclick="del(${p.id})" class="absolute top-2 right-2 bg-red-500/90 w-6 h-6 rounded-full text-xs"><i class="fa-solid fa-trash"></i></button>
-   </div>
-   <div class="p-3"><h3 class="text-sm font-bold leading-tight line-clamp-2">${p.title}</h3>
-   <div class="flex justify-between items-center mt-2"><span class="text-xs text-zinc-400">${p.time} • ❤️ ${p.likes}</span><span class="text-yellow-400 font-bold text-sm">${p.price==0?'FREE':'৳'+p.price}</span></div>
-   <div class="grid grid-cols-2 gap-2 mt-3">
-   <button onclick="like(${p.id})" class="bg-zinc-800 py-2 rounded-xl text-xs font-bold"><i class="fa-regular fa-heart"></i> Like</button>
-   <button onclick="buy(${p.id})" class="bg-yellow-400 text-black py-2 rounded-xl text-xs font-bold">${p.price==0?'দেখুন':'কিনুন'}</button>
-   </div></div>`;
-  gallery.appendChild(div);
- });
-}
-function like(id){const p=posts.find(x=>x.id===id); if(p){p.likes++; localStorage.setItem('gtbd_posts',JSON.stringify(posts)); render();}}
-function del(id){if(confirm('এই ছবিটা ডিলিট করবেন?')){posts=posts.filter(x=>x.id!==id); localStorage.setItem('gtbd_posts',JSON.stringify(posts)); render();}}
-function buy(id){const p=posts.find(x=>x.id===id); alert(p.price==0?`Free Tips: ${p.title}\n\nHD ছবি দেখানো হচ্ছে!`:`"${p.title}"\n\nদাম: ৳${p.price}\n\nভাই Step 2 তে এখানে bKash পেমেন্ট যোগ করবো! এখন Demo চলছে।`);}
-render();
-</script>
+<!-- 9. INTERNATIONAL + LEADERBOARD + KYC -->
+<div style="background:linear-gradient(45deg, #0E4DA4, #00BCD4); padding:12px; border-radius:15px; color:white; text-align:center; margin-top:10px;"><h3>🌍 Sell USA $10</h3><button style="background:white; color:#0E4DA4; border:none; padding:8px 20px; border-radius:20px;">Sell Now</button></div>
+<div style="background:#111; color:white; padding:12px; border-radius:15px; margin-top:10px;"><h3 style="color:#FFD700; text-align:center;">🏆 Leaderboard - Rakib 5000৳</h3><p>🥇 Rakib 5000৳ | 🥈 Sumaiya 4000৳</p></div>
+<div style="background:#FFF3E0; padding:12px; border-radius:15px; border:1px dashed #FF7A00; margin-top:10px; text-align:center;"><h3>🛡️ KYC NID</h3><button style="background:#4CAF50; color:white; border:none; padding:8px 20px; border-radius:20px; width:100%;">Submit NID + 50 Coin</button></div>
+
+<!-- 10. CUSTOMER CARE + ADMIN INCOME -->
+<div style="background:black; color:white; padding:15px; border-radius:10px; margin-top:15px; text-align:center;">📞 24/7 Live Chat <button style="background:#25D366; color:white; padding:8px 15px; border-radius:20px; border:none;">WhatsApp</button> <button style="background:#0084FF; color:white; padding:8px 15px; border-radius:20px; border:none;">Messenger</button></div>
+<div style="background:#111; color:white; padding:15px; border-radius:15px; text-align:center; margin-top:15px; border:2px solid #FFD700;">
+<h2 style="color:#FFD700;">💰 Admin Income - 46,500৳/Day</h2>
+<p style="font-size:12px;">Photo 40% + Ads 75% + Shop + Follower 100% + Blue Tick + VIP + Tournament = Your Income</p>
+<h1 style="color:#FFD700;">Total 46,500৳</h1>
+</div>
+
 </body>
 </html>
