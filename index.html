@@ -1,33 +1,107 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gaming Tips BD - Ajmain</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family: sans-serif;}
+body{background:#0f0f0f;color:#fff;}
+header{background:#000;padding:15px;text-align:center;border-bottom:3px solid #ffeb00;}
+header h1{color:#ffeb00;font-size:24px;}
+header p{color:#aaa;font-size:13px;margin-top:5px;}
+.container{padding:15px;max-width:900px;margin:auto;}
+.upload-box{background:#1a1a1a;border:2px dashed #ffeb00;border-radius:12px;padding:20px;text-align:center;margin-bottom:20px;}
+.upload-box input{display:none;}
+.upload-box label{background:#ffeb00;color:#000;padding:10px 20px;border-radius:8px;font-weight:bold;cursor:pointer;display:inline-block;}
+.upload-box small{display:block;margin-top:10px;color:#888;}
+.gallery{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;}
+.card{background:#1a1a1a;border-radius:12px;overflow:hidden;border:1px solid #333;}
+.card img{width:100%;height:160px;object-fit:cover;}
+.card-body{padding:10px;}
+.card-body h3{font-size:14px;color:#ffeb00;}
+.card-body p{font-size:12px;color:#aaa;margin-top:4px;}
+.btn-buy{background:#ffeb00;color:#000;border:none;width:100%;padding:8px;border-radius:6px;margin-top:8px;font-weight:bold;cursor:pointer;}
+</style>
+</head>
+<body>
+<header>
+<h1>🎮 GAMING TIPS BD</h1>
+<p>ajmainmia12-art | সবাই ছবি ছাড়তে পারবে</p>
+</header>
 
-MASRAFI ISLAM - AMAZON MASTER PLAN
-ID: masrafiislamb-20
-Location: Rajshahi, BD
+<div class="container">
+<div class="upload-box">
+<h3>আপনার Gaming Tips এর ছবি ছাড়ুন</h3>
+<br>
+<input type="file" id="fileInput" accept="image/*">
+<label for="fileInput">📸 ছবি সিলেক্ট করুন</label>
+<small>শুধু ছবি দেওয়া যাবে (JPG, PNG) - ভিডিও Not Allow</small>
+<p id="msg" style="margin-top:10px;color:#ff5555;"></p>
+</div>
 
+<div class="gallery" id="gallery">
+<!-- Demo ছবি -->
+<div class="card">
+<img src="https://i.imgur.com/8Km9tLL.png">
+<div class="card-body">
+<h3>Free Fire Headshot Trick</h3>
+<p>By Azmain BD</p>
+<button class="btn-buy">দেখুন</button>
+</div>
+</div>
+<div class="card">
+<img src="https://i.imgur.com/Q6a5kRD.png">
+<div class="card-body">
+<h3>PUBG Sensitivity Best</h3>
+<p>By User</p>
+<button class="btn-buy">দেখুন</button>
+</div>
+</div>
+</div>
+</div>
 
-[1] AFFILIATE STATUS: ACTIVE
-- Link: amazon.com + your ID
-- কাজ: Amazon এর যেকোনো Product বিক্রি করতে পারবেন
-- টার্গেট: USA এর কাস্টমার (amazon.com)
+<script>
+const fileInput = document.getElementById('fileInput');
+const gallery = document.getElementById('gallery');
+const msg = document.getElementById('msg');
 
-[2] URGENT TASK - TAX INFO (টাকা পেতে হলে করতেই হবে)
-- Amazon Associates > Submit tax information
-- Form: W-8BEN (Non-US)
-- Country: Bangladesh
-- Name: Masrafi Islam
-- এইটা না করলে Payment আটকে থাকবে
+fileInput.addEventListener('change', function(){
+  const file = this.files[0];
+  msg.textContent = "";
+  if(!file) return;
 
-[3] OWN PRODUCT SELL (নিজের জিনিস বিক্রি)
-- Affiliate দিয়ে নিজের জিনিস বিক্রি হয় না
-- নিজের জিনিস বিক্রি করতে লাগবে: sellercentral.amazon.com
-- সহজ উপায়: KDP তে নিজের বই/Journal বিক্রি (Shipping লাগে না)
-- Idea: Islamic Journal, Dua Book, Salah Tracker
+  // ভিডিও ব্লক করার কোড
+  if(!file.type.startsWith('image/')){
+    msg.textContent = "ভাই, এখানে শুধু ছবি দেওয়া যাবে, ভিডিও না! ❌";
+    this.value = "";
+    return;
+  }
 
-[4] BAIRED DESHE BIKRI KORAR APPS (বাইরের দেশের মানুষ পাওয়ার জন্য)
-- App 1: Pinterest (Best for USA Sales)
-  > Title English এ দিতে হবে: "Best Budget Mic for YouTubers 2026"
-  > Description এ Affiliate Link Paste
+  if(file.size > 5*1024*1024){
+    msg.textContent = "ছবি 5MB এর বেশি হলে হবে না ভাই";
+    this.value = "";
+    return;
+  }
 
-- App 2: Quora
-  > USA এর প্রশ্নের উত্তর দিয়ে Link দিবেন
-
-- App 3: YouTube Shorts / Medium
+  const reader = new FileReader();
+  reader.onload = function(e){
+    const div = document.createElement('div');
+    div.className = "card";
+    div.innerHTML = `
+      <img src="${e.target.result}">
+      <div class="card-body">
+        <h3>নতুন Tips - ${file.name}</h3>
+        <p>Just Now Uploaded</p>
+        <button class="btn-buy">দেখুন</button>
+      </div>
+    `;
+    gallery.prepend(div);
+    msg.textContent = "✅ ছবি সফলভাবে যোগ হয়েছে!";
+    msg.style.color = "#00ff88";
+  }
+  reader.readAsDataURL(file);
+});
+</script>
+</body>
+  </html>
