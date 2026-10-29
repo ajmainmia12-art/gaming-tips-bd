@@ -1,88 +1,150 @@
 <!DOCTYPE html>
-<html>
+<html lang="bn">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>GAMING TIPS BD MEGA MALL - FINAL ONE FILE</title>
+<title>GAMING TIPS BD - 38 STAR WORLDWIDE PRO</title>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3940256099942544" crossorigin="anonymous"></script>
+<style>
+body{margin:0;padding:10px;background:#f2f2f2;font-family:Arial;}
+.card{background:white;padding:15px;border-radius:15px;margin-top:12px;border:1px solid #eee;}
+.btn{border:none;padding:10px 15px;border-radius:20px;font-weight:bold;cursor:pointer;margin:2px;}
+</style>
 </head>
-<body style="margin:0; padding:10px; background:#f2f2f2; font-family:Arial;">
+<body>
 
-<!-- 1. LOGO -->
-<div style="text-align:center; background:white; padding:20px; border-radius:20px; border:2px solid #FF7A00;">
-<img src="YOUR_LOGO_LINK" style="width:120px; border-radius:25px;"/>
-<h1 style="color:#FF7A00; margin:5px 0 0 0;">GAMING TIPS BD</h1>
-<h2 style="color:#0E4DA4; margin:0;">MEGA MALL</h2>
+<div class="card" style="text-align:center; border:3px solid #FF7A00;">
+<h1 style="color:#FF7A00;margin:0;">GAMING TIPS BD</h1>
+<h2 style="color:#0E4DA4;margin:0;">38 STAR 🌍 PRO MAX</h2>
+<p>💰 Coin:<b id="myCoin">50</b> | Wallet:<b id="myWallet">0৳</b> | Score:<b id="totalScore">0</b></p>
+<div style="font-size:11px;display:grid;grid-template-columns:1fr 1fr 1fr;gap:5px;">
+<div>👥 <b id="totalUsers">1,234</b> Users</div><div>💰 <b id="totalEarn">৳45k</b> Earn</div><div>📦 <b id="totalOrders">89</b> Orders</div>
+</div>
+<div style="margin-top:8px;">
+<button onclick="toggleDark()" class="btn" style="background:black;color:white;">🌙 Dark</button>
+<button onclick="installPWA()" class="btn" style="background:#0E4DA4;color:white;">📲 Install App</button>
+<select id="currency" onchange="changeCurrency()" style="padding:8px;border-radius:10px;"><option value="BDT">৳ BDT</option><option value="USD">$ USD</option><option value="EUR">€ EUR</option><option value="BTC">₿ Crypto</option></select>
+</div>
+<p style="font-size:10px;color:green;margin:5px 0 0 0;">🛡️ SSL | ✅ Verified | ⭐ 4.9 (2.3K) | PWA</p>
 </div>
 
-<!-- 2. SIGN UP + GENDER LOCK -->
-<div style="background:white; padding:15px; border-radius:15px; margin-top:15px;">
-<h3>📱 Sign Up</h3>
-<input type="text" placeholder="নাম" style="width:95%; padding:12px; margin:5px 0; border-radius:10px; border:1px solid #ddd;"/>
-<input type="text" placeholder="ফোন" style="width:95%; padding:12px; margin:5px 0; border-radius:10px; border:1px solid #ddd;"/>
-<select style="width:100%; padding:12px; margin:5px 0; border-radius:10px;"><option>👦 ছেলে</option><option>👧 মেয়ে</option></select>
-<button style="background:linear-gradient(45deg, #FF7A00, #0E4DA4); color:white; width:100%; padding:12px; border-radius:20px; border:none; font-weight:bold;">Sign Up</button>
-<p style="font-size:10px; color:red; text-align:center;">ছেলে মেয়ের জায়গায় যেতে পারবে না - হার্ড লক</p>
+<div class="card"><h3>📱 Sign Up - 10 Coin</h3>
+<input id="name" placeholder="নাম" style="width:95%;padding:12px;border-radius:10px;border:1px solid #ddd;"/>
+<input id="phone" placeholder="ফোন" style="width:95%;padding:12px;border-radius:10px;border:1px solid #ddd;margin-top:5px;"/>
+<button onclick="doSignup()" class="btn" style="background:linear-gradient(45deg,#FF7A00,#0E4DA4);color:white;width:100%;margin-top:8px;">✅ Sign Up +10 Coin</button>
+<p id="signupMsg" style="text-align:center;color:green;"></p>
 </div>
 
-<!-- 3. ছবি আপলোড -->
-<div style="display:flex; gap:10px; margin-top:15px;">
-<button style="flex:1; background:#0E4DA4; color:white; padding:12px; border-radius:20px; border:none;">👦 ছেলে ছবি</button>
-<button style="flex:1; background:#FF4081; color:white; padding:12px; border-radius:20px; border:none;">👧 মেয়ে ছবি</button>
+<div class="card" style="display:flex;gap:8px;">
+<button onclick="dailyBonus()" class="btn" style="flex:1;background:linear-gradient(45deg,#FFD700,#FF7A00);color:white;padding:12px;">🎁 Daily +10৳</button>
+<button onclick="spinWheel()" class="btn" style="flex:1;background:linear-gradient(45deg,#9C27B0,#E91E63);color:white;padding:12px;">🎡 Spin 100৳</button>
 </div>
 
-<!-- 4. LIKE COMMENT INCOME -->
-<div style="background:white; padding:10px; border-radius:10px; margin-top:10px; text-align:center; font-size:12px;">
-❤️ Like 0.10৳ | 💬 Comment 0.20৳ | Share 0.50৳ | View 1৳<br/>
-<span style="color:green;">User 60% | Admin 40%</span>
+<div class="card" style="display:flex;gap:10px;">
+<div style="flex:1;text-align:center;"><button onclick="document.getElementById('fileBoy').click()" class="btn" style="background:#0E4DA4;color:white;width:100%;">👦 ছেলে ছবি</button><input type="file" id="fileBoy" accept="image/*" style="display:none" onchange="uploadPic(this)"></div>
+<div style="flex:1;text-align:center;"><button onclick="document.getElementById('fileGirl').click()" class="btn" style="background:#FF4081;color:white;width:100%;">👧 মেয়ে ছবি</button><input type="file" id="fileGirl" accept="image/*" style="display:none" onchange="uploadPic(this)"></div>
 </div>
 
-<!-- 5. MINI GAMES -->
-<h3 style="color:#FF7A00;">🎮 ছোট গেম</h3>
-<div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:8px; text-align:center;">
-<div style="background:white; padding:15px; border-radius:10px;">🐦 Flappy<br/><button style="background:#FF7A00; color:white; border:none; padding:3px 10px; border-radius:10px;">Play</button></div>
-<div style="background:white; padding:15px; border-radius:10px;">🐍 Snake<br/><button style="background:#0E4DA4; color:white; border:none; padding:3px 10px; border-radius:10px;">Play</button></div>
-<div style="background:white; padding:15px; border-radius:10px;">🏎️ Car<br/><button style="background:#4CAF50; color:white; border:none; padding:3px 10px; border-radius:10px;">Play</button></div>
-<div style="background:white; padding:15px; border-radius:10px;">🎲 Ludo<br/><button style="background:#9C27B0; color:white; border:none; padding:3px 10px; border-radius:10px;">Play</button></div>
-<div style="background:white; padding:15px; border-radius:10px;">🧩 Puzzle<br/><button style="background:#FF4081; color:white; border:none; padding:3px 10px; border-radius:10px;">Play</button></div>
-<div style="background:white; padding:15px; border-radius:10px;">⚽ Football<br/><button style="background:#00BCD4; color:white; border:none; padding:3px 10px; border-radius:10px;">Play</button></div>
+<div id="picPreview" class="card" style="display:none;text-align:center;">
+<img id="previewImg" style="width:100%;max-height:300px;border-radius:10px;"/>
+<p>❤️ <span id="likeCount">0</span> | 💬 <span id="commentCount">0</span> | 🔗 <span id="shareCount">0</span></p>
+<button onclick="addLike()" class="btn" style="background:#1877F2;color:white;">❤️ Like +0.10৳</button>
+<button onclick="addComment()" class="btn" style="background:#00C851;color:white;">💬 Comment +0.20৳</button>
+<button onclick="addShare()" class="btn" style="background:#FF7A00;color:white;">🔗 Share +0.50৳</button>
+<div style="margin-top:10px;background:#FFF0F5;padding:10px;border-radius:10px;">
+<p style="margin:0;font-size:13px;">📤 Marketplace এ বিক্রি</p>
+<input type="file" id="sellFile" accept="image/*" onchange="uploadForSale(this)" style="margin-top:5px;"/>
+<button onclick="sellPhoto(50)" class="btn" style="background:#FF4081;color:white;">Sell 50৳ (80% লাভ)</button>
+</div>
 </div>
 
-<!-- 6. ADS + SHOPPING -->
-<div style="background:#FFD700; padding:10px; text-align:center; border-radius:10px; margin-top:15px;">📺 AdMob Banner Ad - এখানে অ্যাড আসবে - 5 Coin</div>
-<div style="display:grid; grid-template-columns:1fr 1fr; gap:8px; margin-top:10px;">
-<div style="background:white; border-radius:10px; padding:10px; text-align:center;">🎧 হেডফোন<br/><b>৳850</b><br/><button style="background:#FF7A00; color:white; border:none; padding:5px 10px; border-radius:10px;">Buy</button></div>
-<div style="background:white; border-radius:10px; padding:10px; text-align:center;">👕 জার্সি<br/><b>৳450</b><br/><button style="background:#0E4DA4; color:white; border:none; padding:5px 10px; border-radius:10px;">Buy</button></div>
+<div class="card" style="background:black;color:#00FF00;border:2px solid #00FF00;">
+<h3 style="margin:0;text-align:center;">🔴 LIVE NOW - <span id="liveCount">12</span> জন</h3>
+<div id="liveList" style="margin-top:10px;font-size:13px;"></div>
+<div style="text-align:center;margin-top:10px;"><button onclick="watchLiveEarn()" class="btn" style="background:#00FF00;color:black;">📺 Live দেখুন +0.50৳</button></div>
+<div id="worldBoard" style="margin-top:10px;font-size:11px;color:yellow;"></div>
 </div>
 
-<!-- 7. REFER + WALLET -->
-<div style="background:linear-gradient(45deg, #FF7A00, #FF4081); padding:15px; border-radius:15px; color:white; text-align:center; margin-top:15px;">
-<h3>👥 Refer - 20৳</h3><button style="background:white; color:#FF7A00; padding:8px 15px; border-radius:20px; border:none;">Copy Link</button>
-</div>
-<div style="background:white; border:2px solid #0E4DA4; padding:15px; border-radius:15px; text-align:center; margin-top:10px;">
-<h3>💰 Wallet ৳500</h3>
-<button style="background:#E2136E; color:white; padding:8px 15px; border-radius:10px; border:none;">bKash</button>
-<button style="background:#F6921E; color:white; padding:8px 15px; border-radius:10px; border:none;">Nagad</button>
-<button style="background:#0E4DA4; color:white; padding:8px 15px; border-radius:10px; border:none;">PayPal</button>
-</div>
-
-<!-- 8. FOLLOWER + BLUE TICK + VIP + TOURNAMENT -->
-<div style="background:white; border:1px solid #1877F2; padding:12px; border-radius:15px; margin-top:10px; text-align:center;"><h3 style="color:#1877F2;">📈 1000 Follower ৳500</h3><button style="background:#1877F2; color:white; border:none; padding:8px 20px; border-radius:20px;">Order</button></div>
-<div style="background:#E3F2FD; padding:12px; border-radius:15px; text-align:center; margin-top:10px;"><h3>✅ Blue Tick ৳100</h3><button style="background:#0E4DA4; color:white; border:none; padding:8px 20px; border-radius:20px;">Buy</button></div>
-<div style="background:#111; color:white; padding:12px; border-radius:15px; text-align:center; margin-top:10px; border:2px solid #FFD700;"><h3 style="color:#FFD700;">👑 VIP ৳200/Month</h3><button style="background:#FFD700; color:black; border:none; padding:8px 20px; border-radius:20px;">VIP</button></div>
-<div style="background:white; border:2px solid #FF7A00; padding:12px; border-radius:15px; margin-top:10px; text-align:center;"><h3 style="color:#FF7A00;">🏆 Tournament Entry 50৳ Win 1000৳</h3><button style="background:#FF7A00; color:white; border:none; padding:8px 20px; border-radius:20px;">Join</button></div>
-
-<!-- 9. INTERNATIONAL + LEADERBOARD + KYC -->
-<div style="background:linear-gradient(45deg, #0E4DA4, #00BCD4); padding:12px; border-radius:15px; color:white; text-align:center; margin-top:10px;"><h3>🌍 Sell USA $10</h3><button style="background:white; color:#0E4DA4; border:none; padding:8px 20px; border-radius:20px;">Sell Now</button></div>
-<div style="background:#111; color:white; padding:12px; border-radius:15px; margin-top:10px;"><h3 style="color:#FFD700; text-align:center;">🏆 Leaderboard - Rakib 5000৳</h3><p>🥇 Rakib 5000৳ | 🥈 Sumaiya 4000৳</p></div>
-<div style="background:#FFF3E0; padding:12px; border-radius:15px; border:1px dashed #FF7A00; margin-top:10px; text-align:center;"><h3>🛡️ KYC NID</h3><button style="background:#4CAF50; color:white; border:none; padding:8px 20px; border-radius:20px; width:100%;">Submit NID + 50 Coin</button></div>
-
-<!-- 10. CUSTOMER CARE + ADMIN INCOME -->
-<div style="background:black; color:white; padding:15px; border-radius:10px; margin-top:15px; text-align:center;">📞 24/7 Live Chat <button style="background:#25D366; color:white; padding:8px 15px; border-radius:20px; border:none;">WhatsApp</button> <button style="background:#0084FF; color:white; padding:8px 15px; border-radius:20px; border:none;">Messenger</button></div>
-<div style="background:#111; color:white; padding:15px; border-radius:15px; text-align:center; margin-top:15px; border:2px solid #FFD700;">
-<h2 style="color:#FFD700;">💰 Admin Income - 46,500৳/Day</h2>
-<p style="font-size:12px;">Photo 40% + Ads 75% + Shop + Follower 100% + Blue Tick + VIP + Tournament = Your Income</p>
-<h1 style="color:#FFD700;">Total 46,500৳</h1>
+<h3 style="color:#FF7A00;">🎮 6টা গেম</h3>
+<div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;text-align:center;">
+<div class="card" style="margin:0;">🐦 Flappy<br/><button onclick="openGame('Flappy')" class="btn" style="background:#FF7A00;color:white;">Play</button></div>
+<div class="card" style="margin:0;">🐍 Snake<br/><button onclick="openGame('Snake')" class="btn" style="background:#0E4DA4;color:white;">Play</button></div>
+<div class="card" style="margin:0;">🏎️ Car<br/><button onclick="openGame('Car')" class="btn" style="background:#4CAF50;color:white;">Play</button></div>
+<div class="card" style="margin:0;">🎲 Ludo<br/><button onclick="openGame('Ludo')" class="btn" style="background:#9C27B0;color:white;">Play</button></div>
+<div class="card" style="margin:0;">🧩 Puzzle<br/><button onclick="openGame('Puzzle')" class="btn" style="background:#FF4081;color:white;">Play</button></div>
+<div class="card" style="margin:0;">⚽ Football<br/><button onclick="openGame('Football')" class="btn" style="background:#00BCD4;color:white;">Play</button></div>
 </div>
 
-</body>
-</html>
+<div class="card"><input id="search" placeholder="🔍 Search Coach, Photo, Game..." style="width:95%;padding:12px;border-radius:20px;border:1px solid #ddd;" oninput="doSearch(this.value)"/></div>
+
+<div class="card" style="border:2px solid #1877F2;"><h3>👥 Follower + Blue Tick</h3>
+<p>1K Follower - 50৳ <button onclick="orderNow('1K Follower 50৳')" class="btn" style="background:#1877F2;color:white;">Order</button></p>
+<p>10K Follower - 400৳ <button onclick="orderNow('10K Follower 400৳')" class="btn" style="background:#1877F2;color:white;">Order</button></p>
+<p>FB Blue Tick - 200৳ <button onclick="orderNow('FB Blue Tick 200৳')" class="btn" style="background:#00C851;color:white;">Order</button></p>
+</div>
+
+<div class="card" style="border:2px solid gold;"><h3>👑 VIP Shop</h3>
+<p>VIP Badge - 100 Coin <button onclick="buyVIP(100,'VIP Badge')" class="btn" style="background:gold;color:black;">Buy</button></p>
+<p>Diamond Crown - 500 Coin <button onclick="buyVIP(500,'Diamond Crown')" class="btn" style="background:gold;color:black;">Buy</button></p>
+</div>
+
+<div class="card" style="border:2px solid #00C851;"><h3>🌍 বাইরের দেশের কোচ</h3>
+<div style="display:flex;gap:8px;">
+<div style="flex:1;background:#f9f9f9;padding:10px;border-radius:10px;text-align:center;"><img src="https://i.pravatar.cc/100?img=1" style="width:50px;border-radius:50%;"><br/><b>John USA</b><br/>500৳/h<br/><button onclick="orderNow('USA Coach John')" class="btn" style="background:#00C851;color:white;">Buy Coach</button></div>
+<div style="flex:1;background:#f9f9f9;padding:10px;border-radius:10px;text-align:center;"><img src="https://i.pravatar.cc/100?img=2" style="width:50px;border-radius:50%;"><br/><b>Alex UK</b><br/>600৳/h<br/><button onclick="orderNow('UK Coach Alex')" class="btn" style="background:#00C851;color:white;">Buy Coach</button></div>
+</div>
+</div>
+
+<div class="card" style="background:linear-gradient(45deg,#0E4DA4,#000);color:white;">
+<h3 style="margin:0;text-align:center;">🌍 WORLDWIDE</h3>
+<div style="text-align:center;margin-top:10px;">
+<button onclick="payGlobal('PayPal')" class="btn" style="background:#0070BA;color:white;">PayPal</button>
+<button onclick="payGlobal('Wise')" class="btn" style="background:#00B9FF;color:white;">Wise</button>
+<button onclick="payGlobal('Crypto')" class="btn" style="background:#F7931A;color:white;">₿ Crypto</button>
+<button onclick="askAI()" class="btn" style="background:gold;color:black;">🤖 AI Coach</button>
+<button onclick="mintNFT()" class="btn" style="background:linear-gradient(45deg,#FF00FF,#00FFFF);color:white;">🖼️ NFT 1000$</button>
+</div>
+</div>
+
+<div onclick="watchAd()" class="card" style="background:#FFD700;text-align:center;font-weight:bold;cursor:pointer;">📺 Ad দেখুন +5 Coin +1৳</div>
+
+<div class="card" style="background:linear-gradient(45deg,#FF7A00,#FF4081);color:white;text-align:center;">
+<h3 style="margin:0;">👥 Refer - 20 Coin +5৳</h3><button onclick="copyRef()" class="btn" style="background:white;color:#FF7A00;margin-top:8px;">🔗 Copy Refer Link</button>
+</div>
+
+<div class="card" style="border:3px solid #0E4DA4;text-align:center;">
+<h3>💰 Wallet: <span id="wallet2">0৳</span></h3>
+<button onclick="withdraw('bKash')" class="btn" style="background:#E2136E;color:white;">bKash Withdraw</button>
+<button onclick="withdraw('Nagad')" class="btn" style="background:#F6921E;color:white;">Nagad Withdraw</button>
+<button onclick="payGlobal('PayPal')" class="btn" style="background:#0070BA;color:white;">PayPal Withdraw</button>
+<p style="font-size:11px;color:gray;">100৳ হলে Withdraw</p>
+<button onclick="openAdmin()" class="btn" style="background:black;color:#00FF00;border:1px solid #00FF00;width:100%;margin-top:10px;">🔐 ADMIN PANEL (1234)</button>
+</div>
+
+<div class="card" style="text-align:center;"><p style="font-size:10px;color:gray;">Advertisement - আপনার ইনকাম</p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-3940256099942544" data-ad-slot="1234567890" data-ad-format="auto"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div>
+
+<div id="gameBox" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:#111;z-index:9999;text-align:center;padding-top:20px;">
+<div style="background:white;padding:12px;"><button onclick="closeGame()" class="btn" style="background:red;color:white;">❌ বন্ধ</button> <b id="gameTitle">Game</b> Score: <b id="score" style="color:#FF7A00;">0</b></div>
+<div id="gameArea" style="color:white;font-size:90px;margin-top:60px;">🐦</div>
+<button onclick="addScore()" class="btn" style="background:linear-gradient(45deg,#FF7A00,#0E4DA4);color:white;padding:18px 40px;font-size:20px;margin-top:30px;">TAP TAP - টাকা নিন</button>
+</div>
+
+<div id="adminPanel" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.95);z-index:99999;color:#00FF00;padding:15px;overflow:auto;font-family:monospace;">
+<button onclick="document.getElementById('adminPanel').style.display='none'" class="btn" style="background:red;color:white;">❌ Close</button><h2>🔐 ADMIN</h2><p>Total Wallet: ৳<span id="adminWallet">0</span></p><p>Live: <span id="adminLive">12</span></p><button onclick="alert('✅ সব টাকা bKash এ গেছে!')" class="btn" style="background:#00FF00;color:black;">💸 Withdraw All</button>
+</div>
+
+<script>
+let coin=parseInt(localStorage.getItem('coin')||'50');let wallet=parseFloat(localStorage.getItem('wallet')||'0');let totalScore=parseInt(localStorage.getItem('totalScore')||'0');let score=0;
+function updateUI(){document.getElementById('myCoin').innerText=coin;document.getElementById('myWallet').innerText=wallet.toFixed(2)+'৳';document.getElementById('wallet2').innerText=wallet.toFixed(2)+'৳';document.getElementById('totalScore').innerText=totalScore;document.getElementById('adminWallet').innerText=wallet.toFixed(2);localStorage.setItem('coin',coin);localStorage.setItem('wallet',wallet);localStorage.setItem('totalScore',totalScore);}updateUI();
+function doSignup(){let n=document.getElementById('name').value;if(n==''){alert('নাম লিখুন');return;}coin+=10;wallet+=5;updateUI();document.getElementById('signupMsg').innerText='✅ '+n+' Success!';}
+function uploadPic(input){if(input.files&&input.files[0]){let r=new FileReader();r.onload=function(e){document.getElementById('previewImg').src=e.target.result;document.getElementById('picPreview').style.display='block';coin+=5;wallet+=2;updateUI();};r.readAsDataURL(input.files[0]);}}
+function addLike(){document.getElementById('likeCount').innerText=parseInt(document.getElementById('likeCount').innerText)+1;coin+=1;wallet+=0.10;updateUI();}
+function addComment(){document.getElementById('commentCount').innerText=parseInt(document.getElementById('commentCount').innerText)+1;coin+=2;wallet+=0.20;updateUI();}
+function addShare(){document.getElementById('shareCount').innerText=parseInt(document.getElementById('shareCount').innerText)+1;coin+=3;wallet+=0.50;updateUI();}
+function openGame(name){document.getElementById('gameBox').style.display='block';document.getElementById('gameTitle').innerText=name;score=0;document.getElementById('score').innerText=0;document.getElementById('gameArea').innerText=name=='Flappy'?'🐦':name=='Snake'?'🐍':name=='Car'?'🏎️':name=='Ludo'?'🎲':name=='Puzzle'?'🧩':'⚽';livePlayers.push("আপনি - "+name+" 🔴");}
+function closeGame(){document.getElementById('gameBox').style.display='none';totalScore+=score;updateUI();}
+function addScore(){score++;document.getElementById('score').innerText=score;wallet+=0.10;coin+=1;totalScore++;updateUI();}
+function watchAd(){coin+=5;wallet+=1;updateUI();alert('✅ 5 Coin +1৳!');(adsbygoogle=window.adsbygoogle||[]).push({});}
+function copyRef(){coin+=20;wallet+=5;updateUI();alert('✅ Refer 20 Coin +5৳!');}
+function withdraw(m){if(wallet<100){alert('❌ 100৳ লাগবে! আছে '+wallet.toFixed(2));return;}alert('✅ '+m+' এ '+wallet.toFixed(2)+'৳ Request!');wallet=0;updateUI();}
+function orderNow(p){wallet+=2;updateUI();window.open("https://wa.me/8801XXXXXXXXX?text="+encodeURIComponent("Hello "+p+" order"),"_blank");}e; border:none; padding:3px 10px; border
