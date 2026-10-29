@@ -3,105 +3,166 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Gaming Tips BD - Ajmain</title>
+<title>Gaming Tips BD - Final</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family: sans-serif;}
-body{background:#0f0f0f;color:#fff;}
-header{background:#000;padding:15px;text-align:center;border-bottom:3px solid #ffeb00;}
-header h1{color:#ffeb00;font-size:24px;}
-header p{color:#aaa;font-size:13px;margin-top:5px;}
-.container{padding:15px;max-width:900px;margin:auto;}
-.upload-box{background:#1a1a1a;border:2px dashed #ffeb00;border-radius:12px;padding:20px;text-align:center;margin-bottom:20px;}
-.upload-box input{display:none;}
-.upload-box label{background:#ffeb00;color:#000;padding:10px 20px;border-radius:8px;font-weight:bold;cursor:pointer;display:inline-block;}
-.upload-box small{display:block;margin-top:10px;color:#888;}
-.gallery{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;}
-.card{background:#1a1a1a;border-radius:12px;overflow:hidden;border:1px solid #333;}
-.card img{width:100%;height:160px;object-fit:cover;}
-.card-body{padding:10px;}
-.card-body h3{font-size:14px;color:#ffeb00;}
-.card-body p{font-size:12px;color:#aaa;margin-top:4px;}
-.btn-buy{background:#ffeb00;color:#000;border:none;width:100%;padding:8px;border-radius:6px;margin-top:8px;font-weight:bold;cursor:pointer;}
+@import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@500;700&display=swap');
+body{font-family:'Hind Siliguri',sans-serif;background:#0a0a0a;}
+.scroll-hide::-webkit-scrollbar{display:none}
+.card{transition:0.2s} .card:active{transform:scale(0.97)}
 </style>
 </head>
-<body>
-<header>
-<h1>🎮 GAMING TIPS BD</h1>
-<p>ajmainmia12-art | সবাই ছবি ছাড়তে পারবে</p>
+<body class="text-white pb-20">
+<!-- Header -->
+<header class="sticky top-0 z-50 bg-black/90 backdrop-blur border-b-2 border-yellow-400 p-3">
+<div class="max-w-5xl mx-auto flex justify-between items-center">
+<div class="flex items-center gap-2">
+<i class="fa-solid fa-gamepad text-yellow-400 text-2xl"></i>
+<h1 class="text-xl font-bold">GAMING <span class="text-yellow-400">TIPS BD</span></h1>
+</div>
+<button onclick="document.getElementById('uploadModal').classList.remove('hidden')" class="bg-yellow-400 text-black px-4 py-2 rounded-full font-bold text-sm"><i class="fa-solid fa-plus"></i> আপলোড</button>
+</div>
+<div class="max-w-5xl mx-auto mt-3 flex gap-2">
+<input id="search" oninput="render()" placeholder="🔍 Search tips, Free Fire, PUBG..." class="w-full bg-zinc-900 border border-zinc-700 rounded-full px-4 py-2 text-sm outline-none focus:border-yellow-400">
+</div>
+<div class="max-w-5xl mx-auto mt-3 flex gap-2 overflow-x-auto scroll-hide pb-1">
+<button onclick="setCat('all')" class="catBtn bg-yellow-400 text-black px-4 py-1.5 rounded-full text-sm font-bold whitespace-nowrap" data-cat="all">সব</button>
+<button onclick="setCat('freefire')" class="catBtn bg-zinc-800 px-4 py-1.5 rounded-full text-sm whitespace-nowrap" data-cat="freefire">Free Fire</button>
+<button onclick="setCat('pubg')" class="catBtn bg-zinc-800 px-4 py-1.5 rounded-full text-sm whitespace-nowrap" data-cat="pubg">PUBG</button>
+<button onclick="setCat('tips')" class="catBtn bg-zinc-800 px-4 py-1.5 rounded-full text-sm whitespace-nowrap" data-cat="tips">Tips & Tricks</button>
+<button onclick="setCat('meme')" class="catBtn bg-zinc-800 px-4 py-1.5 rounded-full text-sm whitespace-nowrap" data-cat="meme">Meme</button>
+</div>
 </header>
 
-<div class="container">
-<div class="upload-box">
-<h3>আপনার Gaming Tips এর ছবি ছাড়ুন</h3>
-<br>
-<input type="file" id="fileInput" accept="image/*">
-<label for="fileInput">📸 ছবি সিলেক্ট করুন</label>
-<small>শুধু ছবি দেওয়া যাবে (JPG, PNG) - ভিডিও Not Allow</small>
-<p id="msg" style="margin-top:10px;color:#ff5555;"></p>
+<!-- Stats -->
+<div class="max-w-5xl mx-auto p-3 grid grid-cols-3 gap-2">
+<div class="bg-zinc-900 rounded-xl p-3 text-center border border-zinc-800"><p class="text-yellow-400 font-bold text-lg" id="totalCount">0</p><p class="text-xs text-zinc-400">মোট ছবি</p></div>
+<div class="bg-zinc-900 rounded-xl p-3 text-center border border-zinc-800"><p class="text-green-400 font-bold text-lg">ছবি Only</p><p class="text-xs text-zinc-400">ভিডিও বন্ধ</p></div>
+<div class="bg-zinc-900 rounded-xl p-3 text-center border border-zinc-800"><p class="text-blue-400 font-bold text-lg"><i class="fa-solid fa-users"></i> BD</p><p class="text-xs text-zinc-400">Community</p></div>
 </div>
 
-<div class="gallery" id="gallery">
-<!-- Demo ছবি -->
-<div class="card">
-<img src="https://i.imgur.com/8Km9tLL.png">
-<div class="card-body">
-<h3>Free Fire Headshot Trick</h3>
-<p>By Azmain BD</p>
-<button class="btn-buy">দেখুন</button>
+<!-- Gallery -->
+<div class="max-w-5xl mx-auto p-3">
+<div id="gallery" class="grid grid-cols-2 md:grid-cols-3 gap-3"></div>
+<p id="empty" class="hidden text-center text-zinc-500 mt-20">কোনো ছবি পাওয়া যায়নি<br>প্রথম ছবি আপনি আপলোড করুন!</p>
 </div>
+
+<!-- Upload Modal -->
+<div id="uploadModal" class="hidden fixed inset-0 bg-black/80 z-[100] flex items-center justify-center p-4">
+<div class="bg-zinc-900 w-full max-w-md rounded-2xl p-5 border border-yellow-400/50">
+<div class="flex justify-between items-center mb-4">
+<h2 class="font-bold text-lg">📸 নতুন ছবি ছাড়ুন</h2>
+<button onclick="document.getElementById('uploadModal').classList.add('hidden')" class="bg-zinc-800 w-8 h-8 rounded-full"><i class="fa-solid fa-xmark"></i></button>
 </div>
-<div class="card">
-<img src="https://i.imgur.com/Q6a5kRD.png">
-<div class="card-body">
-<h3>PUBG Sensitivity Best</h3>
-<p>By User</p>
-<button class="btn-buy">দেখুন</button>
+<input type="file" id="file" accept="image/jpeg,image/png,image/webp,image/jpg" class="hidden">
+<div id="drop" onclick="document.getElementById('file').click()" class="border-2 border-dashed border-yellow-400/50 rounded-xl p-6 text-center cursor-pointer bg-black/50">
+<div id="previewWrap" class="hidden"><img id="preview" class="w-full h-40 object-cover rounded-xl mb-2"><p id="fileName" class="text-xs text-zinc-400"></p></div>
+<div id="dropText"><i class="fa-solid fa-cloud-arrow-up text-3xl text-yellow-400"></i><p class="mt-2 text-sm font-bold">ছবি সিলেক্ট করুন</p><p class="text-xs text-zinc-500 mt-1">JPG, PNG, WEBP only - Max 5MB<br>ভিডিও Allow না</p></div>
 </div>
+<p id="err" class="text-red-400 text-xs mt-2 text-center"></p>
+<input id="title" placeholder="টাইটেল লিখুন (যেমন: Free Fire Best Headshot)" class="w-full bg-black border border-zinc-700 rounded-xl px-4 py-3 mt-3 text-sm outline-none focus:border-yellow-400">
+<div class="grid grid-cols-2 gap-2 mt-3">
+<select id="cat" class="bg-black border border-zinc-700 rounded-xl px-3 py-3 text-sm outline-none"><option value="freefire">Free Fire</option><option value="pubg">PUBG</option><option value="tips">Tips</option><option value="meme">Meme</option></select>
+<input id="price" type="number" placeholder="দাম (৳) - ফ্রি হলে 0" class="bg-black border border-zinc-700 rounded-xl px-3 py-3 text-sm outline-none">
 </div>
+<button id="postBtn" class="w-full bg-yellow-400 text-black font-bold py-3 rounded-xl mt-4"><i class="fa-solid fa-rocket"></i> পোস্ট করুন</button>
 </div>
 </div>
 
 <script>
-const fileInput = document.getElementById('fileInput');
-const gallery = document.getElementById('gallery');
-const msg = document.getElementById('msg');
+let posts = JSON.parse(localStorage.getItem('gtbd_posts') || '[]');
+let currentCat = 'all';
+let selectedFileData = null;
 
-fileInput.addEventListener('change', function(){
-  const file = this.files[0];
-  msg.textContent = "";
-  if(!file) return;
+if(posts.length===0){
+ posts = [
+  {id:1,title:'Free Fire Headshot Trick 100% Working',cat:'freefire',price:0,likes:124,img:'https://i.imgur.com/8Km9tLL.png',time:'2h ago'},
+  {id:2,title:'PUBG Mobile Best Sensitivity',cat:'pubg',price:50,likes:89,img:'https://i.imgur.com/Q6a5kRD.png',time:'5h ago'},
+ ];
+}
 
-  // ভিডিও ব্লক করার কোড
-  if(!file.type.startsWith('image/')){
-    msg.textContent = "ভাই, এখানে শুধু ছবি দেওয়া যাবে, ভিডিও না! ❌";
-    this.value = "";
-    return;
-  }
+function setCat(c){
+ currentCat=c;
+ document.querySelectorAll('.catBtn').forEach(b=>{
+  b.className = b.dataset.cat===c ? 'catBtn bg-yellow-400 text-black px-4 py-1.5 rounded-full text-sm font-bold whitespace-nowrap' : 'catBtn bg-zinc-800 px-4 py-1.5 rounded-full text-sm whitespace-nowrap';
+ });
+ render();
+}
 
-  if(file.size > 5*1024*1024){
-    msg.textContent = "ছবি 5MB এর বেশি হলে হবে না ভাই";
-    this.value = "";
-    return;
-  }
-
-  const reader = new FileReader();
-  reader.onload = function(e){
-    const div = document.createElement('div');
-    div.className = "card";
-    div.innerHTML = `
-      <img src="${e.target.result}">
-      <div class="card-body">
-        <h3>নতুন Tips - ${file.name}</h3>
-        <p>Just Now Uploaded</p>
-        <button class="btn-buy">দেখুন</button>
-      </div>
-    `;
-    gallery.prepend(div);
-    msg.textContent = "✅ ছবি সফলভাবে যোগ হয়েছে!";
-    msg.style.color = "#00ff88";
-  }
-  reader.readAsDataURL(file);
+const fileInput=document.getElementById('file');
+fileInput.addEventListener('change', e=>{
+ const file=e.target.files[0];
+ const err=document.getElementById('err');
+ err.textContent='';
+ if(!file) return;
+ if(!file.type.startsWith('image/')){
+  err.textContent='❌ ভাই, শুধু ছবি দেওয়া যাবে, ভিডিও না!';
+  fileInput.value=''; return;
+ }
+ if(file.size>5*1024*1024){
+  err.textContent='❌ ছবি 5MB এর বেশি হবে না';
+  fileInput.value=''; return;
+ }
+ const reader=new FileReader();
+ reader.onload=ev=>{
+  selectedFileData=ev.target.result;
+  document.getElementById('preview').src=selectedFileData;
+  document.getElementById('fileName').textContent=file.name;
+  document.getElementById('previewWrap').classList.remove('hidden');
+  document.getElementById('dropText').classList.add('hidden');
+ }
+ reader.readAsDataURL(file);
 });
+
+document.getElementById('postBtn').addEventListener('click', ()=>{
+ const title=document.getElementById('title').value.trim();
+ const cat=document.getElementById('cat').value;
+ const price=document.getElementById('price').value||0;
+ const err=document.getElementById('err');
+ if(!selectedFileData){err.textContent='প্রথমে ছবি সিলেক্ট করুন ভাই!'; return;}
+ if(!title){err.textContent='টাইটেল লিখুন!'; return;}
+ posts.unshift({id:Date.now(),title,cat,price:parseInt(price),likes:0,img:selectedFileData,time:'Just now'});
+ localStorage.setItem('gtbd_posts',JSON.stringify(posts));
+ selectedFileData=null; fileInput.value=''; document.getElementById('title').value=''; document.getElementById('price').value='';
+ document.getElementById('previewWrap').classList.add('hidden'); document.getElementById('dropText').classList.remove('hidden');
+ document.getElementById('uploadModal').classList.add('hidden');
+ render();
+});
+
+function render(){
+ const q=document.getElementById('search').value.toLowerCase();
+ const gallery=document.getElementById('gallery');
+ const filtered=posts.filter(p=>{
+  const matchCat=currentCat==='all'||p.cat===currentCat;
+  const matchSearch=p.title.toLowerCase().includes(q);
+  return matchCat && matchSearch;
+ });
+ gallery.innerHTML='';
+ document.getElementById('totalCount').textContent=posts.length;
+ if(filtered.length===0){document.getElementById('empty').classList.remove('hidden'); return;}
+ document.getElementById('empty').classList.add('hidden');
+ filtered.forEach(p=>{
+  const div=document.createElement('div');
+  div.className='card bg-zinc-900 rounded-2xl overflow-hidden border border-zinc-800';
+  div.innerHTML=`
+   <div class="relative"><img src="${p.img}" class="w-full h-44 object-cover">
+   <span class="absolute top-2 left-2 bg-black/80 text-[10px] px-2 py-1 rounded-full uppercase">${p.cat}</span>
+   <button onclick="del(${p.id})" class="absolute top-2 right-2 bg-red-500/90 w-6 h-6 rounded-full text-xs"><i class="fa-solid fa-trash"></i></button>
+   </div>
+   <div class="p-3"><h3 class="text-sm font-bold leading-tight line-clamp-2">${p.title}</h3>
+   <div class="flex justify-between items-center mt-2"><span class="text-xs text-zinc-400">${p.time} • ❤️ ${p.likes}</span><span class="text-yellow-400 font-bold text-sm">${p.price==0?'FREE':'৳'+p.price}</span></div>
+   <div class="grid grid-cols-2 gap-2 mt-3">
+   <button onclick="like(${p.id})" class="bg-zinc-800 py-2 rounded-xl text-xs font-bold"><i class="fa-regular fa-heart"></i> Like</button>
+   <button onclick="buy(${p.id})" class="bg-yellow-400 text-black py-2 rounded-xl text-xs font-bold">${p.price==0?'দেখুন':'কিনুন'}</button>
+   </div></div>`;
+  gallery.appendChild(div);
+ });
+}
+function like(id){const p=posts.find(x=>x.id===id); if(p){p.likes++; localStorage.setItem('gtbd_posts',JSON.stringify(posts)); render();}}
+function del(id){if(confirm('এই ছবিটা ডিলিট করবেন?')){posts=posts.filter(x=>x.id!==id); localStorage.setItem('gtbd_posts',JSON.stringify(posts)); render();}}
+function buy(id){const p=posts.find(x=>x.id===id); alert(p.price==0?`Free Tips: ${p.title}\n\nHD ছবি দেখানো হচ্ছে!`:`"${p.title}"\n\nদাম: ৳${p.price}\n\nভাই Step 2 তে এখানে bKash পেমেন্ট যোগ করবো! এখন Demo চলছে।`);}
+render();
 </script>
 </body>
-  </html>
+</html>
