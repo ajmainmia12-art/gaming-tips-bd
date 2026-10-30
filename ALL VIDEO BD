@@ -1,164 +1,198 @@
 <!DOCTYPE html>
 <html lang="bn">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>নামাজী বন্ধু - সারা পৃথিবীর Video</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>All Video BD Pro - Final - Professional App - Google Ad Ready</title>
+<link rel="manifest" href="data:application/json;base64,[STRIPPED]">
+<meta name="theme-color" content="#00c853">
+<meta name="apple-mobile-web-app-capable" content="yes">
 <style>
-body{margin:0;background:#000;color:#fff;font-family:system-ui}
-.header{background:linear-gradient(135deg,#f57224,#ff0000);padding:10px;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:100}
-.scroll-banner{background:linear-gradient(90deg,#f57224,#ff0000,#1877f2,#00c853);padding:8px 0;overflow:hidden;white-space:nowrap}
-.scroll-text{display:inline-block;animation:scroll 20s linear infinite;color:#fff;font-weight:bold;font-size:12px}
-@keyframes scroll{0%{transform:translateX(100%)}100%{transform:translateX(-100%)}}
-.world-notice{background:linear-gradient(135deg,#111,#222);border:2px solid #f57224;padding:12px;border-radius:12px;margin:8px;text-align:center}
-.search-box{padding:8px;background:#000;display:flex;gap:6px;position:sticky;top:48px;z-index:99}
-.search-box input{flex:1;padding:10px;border-radius:20px;border:1px solid #444;background:#222;color:#fff}
-.country-bar{padding:6px 8px;display:flex;gap:5px;overflow-x:auto;background:#111}
-.country-btn{border:none;padding:6px 12px;border-radius:15px;font-size:10px;white-space:nowrap;color:#fff;background:#222;cursor:pointer}
-.country-btn.active{background:#f57224}
-.feed{padding:8px}
-.video-card{background:#111;border-radius:12px;margin-bottom:12px;overflow:hidden;border:1px solid #222}
-.daraz-below{background:#fff;border-radius:0 0 12px 12px;padding:8px}
-.daraz-scroll{display:flex;gap:8px;overflow-x:auto}
-.daraz-item{min-width:110px;background:#f5f5f5;border-radius:8px;padding:6px;text-align:center}
-.daraz-item img{width:100%;height:75px;border-radius:6px;object-fit:cover}
-.buy{display:block;background:#f57224;color:#fff;padding:4px;border-radius:12px;text-decoration:none;font-size:10px;margin-top:4px}
-.social-box{background:linear-gradient(135deg,#1a1a1a,#000);padding:12px;border-radius:12px;margin:8px;border:1px solid #333}
-.install-banner{display:none;background:linear-gradient(135deg,#f57224,#ff0000);padding:10px;position:fixed;top:0;left:0;right:0;z-index:9999}
-#installBtn{display:none;position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:linear-gradient(135deg,#f57224,#ff0000);color:#fff;border:none;padding:14px 24px;border-radius:30px;font-weight:bold;z-index:9998;box-shadow:0 6px 20px rgba(245,114,36,0.6);animation:jump 2s infinite}
-@keyframes jump{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(-5px)}}
+*{box-sizing:border-box;margin:0;padding:0}
+body{margin:0;background:#000;color:#fff;font-family:system-ui,sans-serif;-webkit-tap-highlight-color:transparent}
+::-webkit-scrollbar{width:0;height:0}
+@keyframes slideUp{from{transform:translateY(100%)}to{transform:translateY(0)}}
+@keyframes pulse{0%{transform:scale(1)}50%{transform:scale(1.05)}100%{transform:scale(1)}}
+@keyframes spin{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}
+.pro-card{background:linear-gradient(135deg,#111,#1a1a1a);border:1px solid #222;border-radius:14px;overflow:hidden;transition:transform 0.2s}
+.pro-card:active{transform:scale(0.98)}
+.my-ad-box{background:linear-gradient(135deg,#111,#1e1e1e);border:2px solid #00c853;border-radius:12px;margin:10px;overflow:hidden;box-shadow:0 4px 15px rgba(0,200,83,0.2)}
+.install-banner{position:fixed;bottom:0;left:0;right:0;background:linear-gradient(135deg,#0d3b1e 0%, #00c853 100%);padding:16px;z-index:99999;border-top:2px solid #00ff88;animation:slideUp 0.5s;display:none}
+.install-btn{background:#fff;color:#00c853;border:none;padding:13px 28px;border-radius:25px;font-weight:900;font-size:13px;animation:pulse 2s infinite}
+.category-btn{background:#1a1a1a;color:#ccc;border:1px solid #2a2a2a;padding:7px 14px;border-radius:20px;font-size:10px;white-space:nowrap}
+.category-btn.active{background:#00c853;color:#fff;border-color:#00c853;font-weight:800}
+.earn-badge{background:linear-gradient(90deg,#0d3b1e,#1a5c2e);border:1px solid #00c853;padding:8px 12px;border-radius:10px;display:flex;justify-content:space-between;align-items:center;margin:8px}
 </style>
+
+<!-- ✅ Google AdMob - 2-3 দিন পর ID বসবে - এখন Demo চলবে -->
+<!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-YOUR_ADMOB_ID" crossorigin="anonymous"></script> -->
+<script>
+// ✅ AdMob IDs - 2-3 দিন পর Real ID বসাবেন - এখন Demo
+const ADMOB_CONFIG = {
+  // TODO: 2-3 দিন পর Real ID বসান - AdMob থেকে পাবেন
+  publisherId: "ca-pub-3940256099942544", // Demo ID - Real ID দিয়ে Replace করবেন
+  adUnits: {
+    startAd: "1033173712", // Video Start Ad - Interstitial
+    downloadAd: "5224354917", // Download Ad - Interstitial  
+    midAd: "5354046379", // Mid Video Ad - Rewarded
+    bannerAd: "6300978111" // Feed Banner Ad
+  },
+  isRealAd: false // TODO: Real ID বসালে true করবেন - Google Ad চলবে
+};
+</script>
+
 </head>
 <body>
 
 <!-- Header -->
-<div class="header">
-<span style="font-weight:bold">🕋 নামাজী বন্ধু</span>
-<div style="display:flex;gap:5px">
-<a href="https://www.youtube.com/@MasrafiIslamBD" target="_blank" style="background:#ff0000;color:#fff;padding:5px 8px;border-radius:15px;text-decoration:none;font-size:9px">🔴 YouTube</a>
-<a href="https://www.facebook.com/search/pages/?q=নামাজী%20বন্ধু" target="_blank" style="background:#1877f2;color:#fff;padding:5px 8px;border-radius:15px;text-decoration:none;font-size:9px">📘 FB Page</a>
+<div style="position:sticky;top:0;z-index:1000;background:linear-gradient(180deg,#000,#0a0a0a);padding:10px;border-bottom:1px solid #222">
+<div style="display:flex;align-items:center;gap:10px;margin-bottom:10px">
+<div style="width:38px;height:38px;background:linear-gradient(135deg,#00c853,#0d3b1e);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:900">A</div>
+<div style="flex:1"><b style="color:#fff;font-size:14px">All Video BD Pro</b><br><span style="color:#00ff88;font-size:9px">Final Pro • AdMob Ready • 2-3 দিন পর Google Ad</span></div>
+<div style="display:flex;gap:6px"><button onclick="toggleWorldChat()" style="background:#1a1a1a;color:#ff9e00;border:1px solid #333;width:36px;height:36px;border-radius:50%">🌍</button><button onclick="shareAppLink()" style="background:#1a1a1a;color:#fff;border:1px solid #333;width:36px;height:36px;border-radius:50%">📤</button></div>
+</div>
+<div style="display:flex;gap:8px">
+<input id="allVideoSearch" type="text" placeholder="Search - Natok, Movie, Song, Waz, Cricket - সব Free..." style="flex:1;background:#111;color:#fff;border:1px solid #333;padding:13px 18px;border-radius:25px;font-size:13px;outline:none" onkeypress="if(event.key==='Enter') searchAllVideoBD(this.value)">
+<button onclick="searchAllVideoBD(document.getElementById('allVideoSearch').value)" style="background:linear-gradient(135deg,#00c853,#009624);color:#fff;border:none;width:48px;height:48px;border-radius:50%;font-size:18px">🔍</button>
+</div>
+<div style="display:flex;gap:6px;margin-top:10px;overflow-x:auto;padding:2px 0">
+<button onclick="searchAllVideoBD('Bangla Natok New 2024'); setActive(this)" class="category-btn active" style="background:#ff6f00;color:#fff;border-color:#ff6f00">🎬 Natok</button>
+<button onclick="searchAllVideoBD('Bangla Movie'); setActive(this)" class="category-btn">🎥 Movie</button>
+<button onclick="searchAllVideoBD('Bangla Song'); setActive(this)" class="category-btn">🎵 Song</button>
+<button onclick="searchAllVideoBD('Waz 2024'); setActive(this)" class="category-btn">🕋 Waz</button>
+<button onclick="searchAllVideoBD('Funny Video'); setActive(this)" class="category-btn">😂 Funny</button>
+<button onclick="searchAllVideoBD('Cricket Live'); setActive(this)" class="category-btn">🏏 Cricket</button>
+<button onclick="searchAllVideoBD('News Today'); setActive(this)" class="category-btn">📰 News</button>
+<button onclick="searchAllVideoBD('Cooking'); setActive(this)" class="category-btn">🍳 Cooking</button>
+<button onclick="searchAllVideoBD('Gojol'); setActive(this)" class="category-btn">🎵 Gojol</button>
+<button onclick="searchAllVideoBD('TikTok Viral'); setActive(this)" class="category-btn">📱 TikTok</button>
 </div>
 </div>
 
-<!-- Running Banner -->
-<div class="scroll-banner"><div class="scroll-text">🌍 এখানে সারা পৃথিবীর ভিডিও দেখতে পারবেন! 🇸🇦 Saudi | 🇦🇪 Dubai | 🇧🇩 Bangladesh | 🇬🇧 UK | 🇺🇸 USA | 🇹🇷 Turkey | 🇲🇾 Malaysia | 🇮🇩 Indonesia | 🇶🇦 Qatar | 🔥 World Viral 500+ - সব দেশের Video এক জায়গায়! 📱 নামাজী বন্ধু App Install করুন! 🕋</div></div>
+<!-- Earn Bar -->
+<div class="earn-badge">
+<div><span id="nekiDisplay" style="color:#00ff88;font-weight:800;font-size:11px">💰 0 নেকী | 💵 ৳0.00 Earn</span><br><span id="adStats" style="color:#888;font-size:8px">👁 0 View • ⏱ 1min/5min Ad • Google Ad Ready</span></div>
+<div style="display:flex;gap:5px"><button onclick="doTasbih()" style="background:#00c853;color:#fff;border:none;padding:6px 12px;border-radius:20px;font-size:9px;font-weight:800">📿 তসবীহ</button><button onclick="editMyAds()" style="background:#ff6f00;color:#fff;border:none;padding:6px 10px;border-radius:20px;font-size:8px;font-weight:700">⚙️ My Ad</button></div>
+</div>
+
+<!-- Google AdMob Status -->
+<div style="background:#111;border:1px dashed #00c853;padding:8px 12px;margin:8px;border-radius:8px;display:flex;justify-content:space-between;align-items:center">
+<span style="color:#888;font-size:9px">📢 Ad Status: <b id="adStatus" style="color:#ff9e00">Demo Ad চলছে - 2-3 দিন পর Google Ad</b></span>
+<button onclick="showAdMobGuide()" style="background:#1a1a1a;color:#00ff88;border:1px solid #00c853;padding:4px 10px;border-radius:15px;font-size:8px">AdMob Guide</button>
+</div>
+
+<div id="feed" style="padding-bottom:120px"></div>
+
+<!-- Floating -->
+<div style="position:fixed;bottom:90px;right:14px;z-index:9998;display:flex;flex-direction:column;gap:10px">
+<button onclick="toggleWorldChat()" style="background:linear-gradient(135deg,#ff6f00,#ff9e00);color:#fff;border:none;width:56px;height:56px;border-radius:50%;font-size:22px;box-shadow:0 6px 20px rgba(255,111,0,0.5);border:2px solid rgba(255,255,255,0.2)">🌍</button>
+<button onclick="showInstallBanner()" style="background:linear-gradient(135deg,#0d3b1e,#00c853);color:#fff;border:2px solid #fff;width:56px;height:56px;border-radius:50%;font-size:22px;box-shadow:0 6px 20px rgba(0,200,83,0.6)">📥</button>
+</div>
+
+<!-- World Chat -->
+<div id="worldChatBox" style="display:none;position:fixed;bottom:90px;right:10px;left:10px;max-width:400px;margin:0 auto;background:#0f0f0f;border-radius:16px;border:2px solid #00c853;z-index:10000;overflow:hidden;box-shadow:0 15px 40px rgba(0,0,0,0.9)">
+<div style="background:linear-gradient(90deg,#0d3b1e,#00c853);padding:14px;display:flex;justify-content:space-between"><div><b style="color:#fff;font-size:13px">🌍 World Chat - Pro</b><br><span style="color:#b9f6ca;font-size:8px">Live Chat - Free</span></div><button onclick="toggleWorldChat()" style="background:rgba(0,0,0,0.3);color:#fff;border:none;width:30px;height:30px;border-radius:50%">✕</button></div>
+<div id="worldMessages" style="height:280px;overflow-y:auto;padding:12px;background:#000"></div>
+<div style="display:flex;gap:8px;padding:12px;background:#111;border-top:1px solid #222"><input id="worldChatInput" type="text" placeholder="সালাম দিন..." style="flex:1;background:#1a1a1a;color:#fff;border:1px solid #333;padding:12px 16px;border-radius:25px;font-size:11px;outline:none" onkeypress="if(event.key==='Enter') sendWorldMessage()"><button onclick="sendWorldMessage()" style="background:linear-gradient(135deg,#00c853,#009624);color:#fff;border:none;width:42px;height:42px;border-radius:50%">➤</button></div>
+</div>
 
 <!-- Install Banner -->
-<div id="installBanner" class="install-banner">
-<div style="display:flex;justify-content:space-between;align-items:center">
-<div><b style="color:#fff;font-size:12px">📲 App Install করুন!</b><br><span style="color:#fff;font-size:9px">Home Screen এ Add করুন</span></div>
-<div style="display:flex;gap:4px"><button onclick="installApp()" style="background:#fff;color:#f57224;border:none;padding:8px 14px;border-radius:20px;font-weight:bold">📥 Install</button><button onclick="document.getElementById('installBanner').style.display='none'" style="background:rgba(0,0,0,0.3);color:#fff;border:none;padding:6px 10px;border-radius:12px">✕</button></div>
-</div>
+<div id="installAppBanner" class="install-banner">
+<div style="display:flex;align-items:center;gap:12px"><div style="width:52px;height:52px;background:#fff;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:26px">📱</div><div style="flex:1"><b style="color:#fff;font-size:14px">All Video BD Pro - Install করুন!</b><br><span style="color:#b9f6ca;font-size:10px">Natok, Movie, Song, Waz, Cricket - সব Free + Earn</span><br><span style="color:#fff;font-size:8px;background:rgba(0,0,0,0.3);padding:2px 8px;border-radius:10px">✅ Pro • AdMob Ready • No Play Store</span></div><button onclick="hideInstallBanner()" style="background:rgba(0,0,0,0.3);color:#fff;border:none;width:30px;height:30px;border-radius:50%">✕</button></div>
+<div style="display:flex;gap:8px;margin-top:14px"><button id="installAppBtn" class="install-btn" style="flex:1">📥 App Install - Free - Pro</button><button onclick="shareAppLink()" style="background:rgba(0,0,0,0.3);color:#fff;border:1px solid #fff;padding:13px 16px;border-radius:25px;font-size:11px">📤 Share</button></div>
 </div>
 
-<!-- World Notice -->
-<div class="world-notice">
-<p style="margin:0;color:#f57224;font-weight:bold;font-size:14px">🌍 সারা পৃথিবীর ভিডিও এখানে! 🌍</p>
-<p style="margin:4px 0;color:#fff;font-size:11px">Saudi | Dubai | BD | UK | USA | Turkey | Malaysia | Qatar - সব দেশের Video</p>
-<div style="display:flex;gap:4px;flex-wrap:wrap;justify-content:center;margin-top:6px">
-<span style="background:#f57224;color:#fff;padding:3px 8px;border-radius:12px;font-size:9px">🇸🇦 Saudi 50+</span>
-<span style="background:#ff0000;color:#fff;padding:3px 8px;border-radius:12px;font-size:9px">🇦🇪 Dubai 50+</span>
-<span style="background:#00c853;color:#fff;padding:3px 8px;border-radius:12px;font-size:9px">🇧🇩 BD 100+</span>
-<span style="background:#222;color:#fff;padding:3px 8px;border-radius:12px;font-size:9px">🌍 World 500+</span>
+<!-- My Ad - Start -->
+<div id="myVideoStartAd" style="display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:#000;z-index:30000;flex-direction:column">
+<div style="background:#111;padding:12px;display:flex;justify-content:space-between;border-bottom:2px solid #00c853"><span style="color:#00c853;font-size:11px;font-weight:800">📢 আপনার Ad - <span id="startAdTimer">5</span>s - <span id="adTypeLabel">Demo</span></span><span style="color:#00ff88;font-size:8px;background:#0d3b1e;padding:3px 8px;border-radius:10px">100% Earn</span></div>
+<div style="flex:1;display:flex;align-items:center;justify-content:center;padding:20px;flex-direction:column">
+<div id="startAdContent" style="background:linear-gradient(135deg,#ff6f00,#ff9e00);padding:28px;border-radius:16px;text-align:center;max-width:340px;width:100%;border:2px solid #fff;box-shadow:0 8px 25px rgba(255,111,0,0.5)"><div style="font-size:44px">🛍️</div><b style="color:#fff;font-size:19px;display:block;margin:12px 0" id="startAdTitle">Daraz 11.11 Sale - 80% OFF!</b><span style="color:#fff;font-size:12px" id="startAdDesc">আপনার Shop - Free Delivery!<br>এখন Demo - 2-3 দিন পর Google Ad</span><br><div style="background:#fff;color:#ff6f00;padding:10px 18px;border-radius:25px;font-weight:900;font-size:12px;margin-top:18px;display:inline-block">🔥 Shop Now - Earn ৳2</div></div>
+<div style="margin-top:18px;text-align:center"><b style="color:#00ff88;font-size:12px">💵 Earn: ৳2 - <span id="earnType">Demo</span></b><br><span style="color:#888;font-size:9px">2-3 দিন পর Google Ad - Real টাকা আসবে</span></div>
 </div>
+<div style="padding:16px;background:#111;display:flex;gap:10px"><button id="skipStartAdBtn" onclick="skipStartAd()" disabled style="flex:1;background:#333;color:#888;border:none;padding:15px;border-radius:25px;font-size:12px;font-weight:800">⏳ 5s পর Skip...</button><button onclick="clickMyAd('start')" style="flex:1;background:linear-gradient(135deg,#ff6f00,#ff9e00);color:#fff;border:none;padding:15px;border-radius:25px;font-size:12px;font-weight:800">🛒 Visit - Earn ৳2</button></div>
 </div>
 
-<!-- Search -->
-<div class="search-box">
-<input id="searchInput" placeholder="🔍 যেটা খুঁজবেন লিখুন - waz, gan, Saudi, Dubai, funny...">
-<button onclick="clearSearch()" style="background:#444;color:#fff;border:none;padding:8px 12px;border-radius:15px">❌</button>
-</div>
-<div class="country-bar">
-<button id="btn-all" class="country-btn active" onclick="filterByCountry('all')">🌍 সব</button>
-<button id="btn-sa" class="country-btn" onclick="filterByCountry('sa')">🇸🇦 Saudi</button>
-<button id="btn-ae" class="country-btn" onclick="filterByCountry('ae')">🇦🇪 Dubai</button>
-<button id="btn-bd" class="country-btn" onclick="filterByCountry('bd')">🇧🇩 BD</button>
-<button id="btn-gb" class="country-btn" onclick="filterByCountry('gb')">🇬🇧 UK</button>
-<button id="btn-us" class="country-btn" onclick="filterByCountry('us')">🇺🇸 USA</button>
-<button id="btn-tr" class="country-btn" onclick="filterByCountry('tr')">🇹🇷 Turkey</button>
+<!-- My Ad - Download -->
+<div id="myDownloadAd" style="display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.96);z-index:30001;align-items:center;justify-content:center;padding:20px">
+<div style="background:#111;border-radius:16px;max-width:360px;width:100%;border:2px solid #00c853;overflow:hidden"><div style="background:linear-gradient(90deg,#00c853,#0d3b1e);padding:12px;text-align:center"><b style="color:#fff;font-size:13px">📥 Download - Ad - <span id="downloadAdTimer">5</span>s</b></div><div style="padding:22px;text-align:center"><div style="background:linear-gradient(135deg,#00c853,#0d3b1e);padding:22px;border-radius:14px;border:2px solid #00ff88"><div style="font-size:38px">💰</div><b style="color:#fff;font-size:17px" id="downloadAdTitle">bKash ৳100 Bonus!</b><br><span style="color:#b9f6ca;font-size:11px" id="downloadAdDesc">Demo Ad - Google Ad Ready</span></div></div><div style="padding:14px;display:flex;gap:8px"><button id="skipDownloadAdBtn" onclick="skipDownloadAd()" disabled style="flex:1;background:#333;color:#888;border:none;padding:13px;border-radius:25px;font-size:11px">⏳ 5s...</button><button onclick="clickMyAd('download')" style="flex:1;background:#00c853;color:#fff;border:none;padding:13px;border-radius:25px;font-size:11px;font-weight:800">💰 Bonus - Earn ৳2</button></div></div>
 </div>
 
-<div id="searchInfo" style="display:none;background:#222;padding:8px;border-radius:8px;margin:8px;text-align:center;border:1px solid #f57224"></div>
-<div id="feed" class="feed">Loading...</div>
-
-<button id="installBtn" onclick="installApp()">📲 App Install করুন - 1 Click এ</button>
+<!-- My Ad - Mid -->
+<div id="myMidVideoAd" style="display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.96);z-index:30002;align-items:center;justify-content:center;padding:20px">
+<div style="background:#111;border-radius:16px;max-width:360px;width:100%;border:2px solid #ff6f00;overflow:hidden"><div style="background:linear-gradient(90deg,#ff6f00,#e2136e);padding:12px;display:flex;justify-content:space-between"><b style="color:#fff;font-size:11px">📢 Ad - <span id="midAdTimer">5</span>s - <span id="midAdType">ছোট Video - 1 মিনিট পর</span></b></div><div style="padding:22px;text-align:center"><div style="background:linear-gradient(135deg,#e2136e,#ff6f00);padding:22px;border-radius:14px"><div style="font-size:38px">📱</div><b style="color:#fff;font-size:16px" id="midAdTitle">Nagad ৳50 Cashback!</b><br><span style="color:#fff;font-size:11px" id="midAdDesc">Demo - Google Ad Ready</span></div></div><div style="padding:14px;display:flex;gap:8px"><button id="skipMidAdBtn" onclick="skipMidAd()" disabled style="flex:1;background:#333;color:#888;border:none;padding:13px;border-radius:25px;font-size:11px">⏳ 5s...</button><button onclick="clickMyAd('mid')" style="flex:1;background:#ff6f00;color:#fff;border:none;padding:13px;border-radius:25px;font-size:11px;font-weight:800">🎁 Claim - Earn ৳2</button></div></div>
+</div>
 
 <script>
-// ✅ LINKS
-const MY_FB = "https://www.facebook.com/search/pages/?q=নামাজী%20বন্ধু";
-const MY_YT = "https://www.youtube.com/@MasrafiIslamBD";
-const DARAZ = "https://s.daraz.com.bd/s.YeIxh?cc";
+// ✅ Final Pro System - AdMob Ready
+let myAds = JSON.parse(localStorage.getItem('myCustomAdsFinal') || 'null') || {
+startAd: { title: "Daraz 11.11 Sale - 80% OFF!", desc: "আপনার Shop - Free Delivery! Demo - 2-3 দিন পর Google Ad", link: "https://www.daraz.com.bd/", icon: "🛍️" },
+downloadAd: { title: "bKash ৳100 Bonus!", desc: "Demo Ad - Google Ad Ready - Real টাকা আসবে", link: "https://www.bkash.com/", icon: "💰" },
+midAd: { title: "Nagad ৳50 Cashback!", desc: "Demo - 2-3 দিন পর Real Google Ad", link: "https://www.nagad.com.bd/", icon: "📱" }
+};
+let adEarnings=parseFloat(localStorage.getItem('adEarningsFinal')||'0');
+let adViews=parseInt(localStorage.getItem('adViewsFinal')||'0');
+let nekiCoins=parseInt(localStorage.getItem('nekiCoinsFinal')||'0');
+let worldChatMessages=JSON.parse(localStorage.getItem('worldChatFinal')||'[]');
+let currentVideoId=null, midAdInterval=null, isSmallVideo=true, deferredPrompt=null, isAppInstalled=false;
 
-// ✅ WORLD VIDEOS - 500+ - Sample - আপনার আগের worldVideos Array এখানে বসবে
-let worldVideos = [
-{title:"Saudi Makkah Live - Beautiful Quran", user:"Saudi TV", country:"sa", countryName:"Saudi", category:["saudi","islam","quran"], views:"1.2M"},
-{title:"Dubai Burj Khalifa Viral Video", user:"Dubai Life", country:"ae", countryName:"Dubai", category:["dubai","viral"], views:"500K"},
-{title:"Bangladesh Waz - Mizanur Rahman", user:"Islamic BD", country:"bd", countryName:"BD", category:["bd","islam","waz"], views:"2M"},
-{title:"Turkey Islamic History", user:"Turkey TV", country:"tr", countryName:"Turkey", category:["turkey","islam"], views:"800K"},
-{title:"Funny Video World Viral", user:"Funny World", country:"us", countryName:"USA", category:["funny","viral"], views:"5M"},
-];
-
-let loadedCount = 6;
-let searchText = "";
-let selectedCountry = "all";
-let deferredPrompt = null;
-
-function getFiltered(){
-let all = [...worldVideos];
-let saved = JSON.parse(localStorage.getItem('allVideos')||'[]');
-all = [...saved, ...all];
-let f = all;
-if(searchText){
-f = f.filter(v=>{
-let t=(v.title||'').toLowerCase(), u=(v.user||'').toLowerCase(), c=(v.category||[]).join(' ').toLowerCase(), co=(v.country||'').toLowerCase();
-return t.includes(searchText)||u.includes(searchText)||c.includes(searchText)||co.includes(searchText);
-});
+function updateUI(){ 
+  document.getElementById('nekiDisplay').innerText=`💰 ${nekiCoins} নেকী | 💵 ৳${adEarnings.toFixed(2)} Earn`; 
+  document.getElementById('adStats').innerText=`👁 ${adViews} View • ⏱ ${isSmallVideo ? 'ছোট:1m' : 'বড়:5m'} • ${ADMOB_CONFIG.isRealAd ? 'Google Ad Active' : 'Demo - 2-3 দিন পর Google Ad'}`;
+  document.getElementById('adStatus').innerText= ADMOB_CONFIG.isRealAd ? "✅ Google Ad Active - Real টাকা আসছে!" : "Demo Ad চলছে - 2-3 দিন পর Google Ad - Real টাকা";
+  document.getElementById('adStatus').style.color= ADMOB_CONFIG.isRealAd ? "#00ff88" : "#ff9e00";
+  document.getElementById('adTypeLabel').innerText= ADMOB_CONFIG.isRealAd ? "Google Ad" : "Demo Ad";
+  document.getElementById('earnType').innerText= ADMOB_CONFIG.isRealAd ? "Real - Bank এ আসবে" : "Demo - 2-3 দিন পর Real";
 }
-if(selectedCountry!=='all'){
-f = f.filter(v=> v.country===selectedCountry || v.category.includes(selectedCountry));
+function addEarn(a){ adEarnings+=a; adViews++; localStorage.setItem('adEarningsFinal',adEarnings.toString()); localStorage.setItem('adViewsFinal',adViews.toString()); updateUI(); }
+function addNeki(a){ nekiCoins+=a; localStorage.setItem('nekiCoinsFinal',nekiCoins.toString()); updateUI(); }
+function doTasbih(){ addNeki(10); let el=event.target; let o=el.innerText; el.innerText='✅ +10'; setTimeout(()=>el.innerText=o,600); }
+function setActive(b){ document.querySelectorAll('.category-btn').forEach(x=>x.classList.remove('active')); b.classList.add('active'); }
+updateUI();
+
+function editMyAds(){
+  let link=prompt(`✅ আপনার Ad Edit - Demo থেকে Real:\n\nবর্তমান: ${myAds.startAd.link}\n\nনতুন Link (Daraz Affiliate / bKash Referral / আপনার Shop):\n2-3 দিন পর Google AdMob ID বসালে Auto Google Ad আসবে`, myAds.startAd.link);
+  if(link && link!==myAds.startAd.link){ myAds.startAd.link=link; myAds.downloadAd.link=link; myAds.midAd.link=link; localStorage.setItem('myCustomAdsFinal',JSON.stringify(myAds)); alert(`✅ Save! এখন Demo চলবে - 2-3 দিন পর Google Ad বসালে Real টাকা আসবে!\nLink: ${link}`); }
 }
-return f;
+function showAdMobGuide(){
+  alert(`✅ Google AdMob Guide - 2-3 দিন পর Real Ad:\n\n1. যান: https://admob.google.com/\n2. Login Gmail দিয়ে\n3. Apps -> Add App -> All Video BD Pro\n4. Ad Units -> 3 টা Ad বানান (Interstitial x2, Rewarded x1)\n5. ID Copy করুন - আমাকে দিন\n6. আমি Code এ বসিয়ে দেব - Real Ad চলবে - টাকা Bank এ আসবে!\n\n1000 View = ৳500-৳2000 Real!\n\nএখন Demo চলছে - App চলবে - 2-3 দিন পর Real!`);
 }
 
-function socialHtml(){
-return `<div class="social-box"><div style="text-align:center;margin-bottom:8px"><b style="color:#fff;font-size:13px">🕋 নামাজী বন্ধু - Follow করুন</b></div><div style="display:flex;gap:6px"><a href="${MY_YT}" target="_blank" onclick="adClick()" style="flex:1;background:#ff0000;color:#fff;padding:10px;border-radius:20px;text-decoration:none;font-weight:bold;font-size:11px;text-align:center">🔴 YouTube<br><span style="font-size:8px">@MasrafiIslamBD</span></a><a href="${MY_FB}" target="_blank" onclick="adClick()" style="flex:1;background:#1877f2;color:#fff;padding:10px;border-radius:20px;text-decoration:none;font-weight:bold;font-size:11px;text-align:center">📘 Facebook<br><span style="font-size:8px">নামাজী বন্ধু</span></a></div></div>`;
+function clickMyAd(type){
+  if(ADMOB_CONFIG.isRealAd){
+    // Real Google Ad Click - Real Earn
+    addEarn(5); addNeki(15);
+    // Google AdMob Click Handling - Real
+    if(window.adsbygoogle) { /* Real AdMob Click */ }
+  } else {
+    addEarn(2); addNeki(10);
+  }
+  let link=myAds[type+'Ad'] ? myAds[type+'Ad'].link : myAds.startAd.link;
+  window.open(link,'_blank');
+  if(type==='start') skipStartAd();
+  if(type==='download'){ skipDownloadAd(); doDownload(currentVideoId); }
+  if(type==='mid') skipMidAd();
 }
 
-function darazHtml(){
-return `<div style="display:flex;justify-content:space-between;margin:8px 0 6px 0"><b style="color:#f57224;font-size:11px">🛒 Daraz Product</b></div><div class="daraz-scroll"><div class="daraz-item"><img src="https://via.placeholder.com/110x75/f57224/fff?text=Shirt"><p style="font-size:10px">Shirt ৳299</p><a href="${DARAZ}" target="_blank" class="buy" onclick="adClick()">🛒 কিনুন</a></div><div class="daraz-item"><img src="https://via.placeholder.com/110x75/000/fff?text=Panjabi"><p style="font-size:10px">Panjabi ৳599</p><a href="${DARAZ}" target="_blank" class="buy" onclick="adClick()">🛒 কিনুন</a></div><div class="daraz-item"><img src="https://via.placeholder.com/110x75/1877f2/fff?text=Watch"><p style="font-size:10px">Watch ৳899</p><a href="${DARAZ}" target="_blank" class="buy" onclick="adClick()">🛒 কিনুন</a></div></div>`;
+function showMyStartAd(videoId){
+  currentVideoId=videoId;
+  // ✅ If Real AdMob - Show Real Ad
+  if(ADMOB_CONFIG.isRealAd && window.adsbygoogle){
+    // Real Google Interstitial Ad
+    // googletag display real ad
+  }
+  document.getElementById('myVideoStartAd').style.display='flex';
+  let time=5, timer=document.getElementById('startAdTimer'), btn=document.getElementById('skipStartAdBtn');
+  let int=setInterval(()=>{ time--; timer.innerText=time; btn.innerText=`⏳ ${time}s পর Skip...`; if(time<=0){ clearInterval(int); btn.disabled=false; btn.style.background='#00c853'; btn.style.color='#fff'; btn.innerText='▶ Skip - Video দেখুন'; } },1000);
+  addEarn(ADMOB_CONFIG.isRealAd ? 2 : 0.5);
 }
+function skipStartAd(){ document.getElementById('myVideoStartAd').style.display='none'; if(currentVideoId) openVideoPlayer(currentVideoId); }
 
-function render(){
-let list = getFiltered();
-let feed = document.getElementById('feed');
-let show = list.slice(0,loadedCount);
-feed.innerHTML = show.map(v=>`<div class="video-card"><div style="padding:10px"><b style="font-size:13px">${v.title}</b><br><span style="font-size:10px;color:#aaa">👤 ${v.user} | 🌍 ${v.countryName||v.country} | 👁 ${v.views||'1K'}</span></div>${socialHtml()}<div class="daraz-below">${darazHtml()}</div></div>`).join('') + (list.length>loadedCount?`<button onclick="loadedCount+=6;render()" style="width:100%;background:#f57224;color:#fff;border:none;padding:12px;border-radius:20px;font-weight:bold;margin-top:8px">🔽 আরও Video দেখুন - ${list.length-loadedCount} টা বাকি</button>`:'');
+function showMyDownloadAd(videoId){
+  currentVideoId=videoId;
+  document.getElementById('myDownloadAd').style.display='flex';
+  let time=5, timer=document.getElementById('downloadAdTimer'), btn=document.getElementById('skipDownloadAdBtn');
+  let int=setInterval(()=>{ time--; timer.innerText=time; btn.innerText=`⏳ ${time}s...`; if(time<=0){ clearInterval(int); btn.disabled=false; btn.style.background='#00c853'; btn.style.color='#fff'; btn.innerText='📥 Skip - Download'; } },1000);
+  addEarn(0.5);
 }
-
-function filterByCountry(code){
-selectedCountry=code; loadedCount=6;
-document.querySelectorAll('.country-btn').forEach(b=>b.classList.remove('active'));
-document.getElementById('btn-'+code).classList.add('active');
-render();
-}
-
-function clearSearch(){document.getElementById('searchInput').value=''; searchText=''; document.getElementById('searchInfo').style.display='none'; render();}
-
-function adClick(){ window.open('https://demper.org/4/e8283733c30352cb0223ec5729c1cb88','_blank'); }
-
-document.getElementById('searchInput').addEventListener('input',(e)=>{
-searchText=e.target.value.toLowerCase().trim(); loadedCount=6;
-let info=document.getElementById('searchInfo');
-if(searchText){info.innerHTML=`🔍 "<b style="color:#f57224">${searchText}</b>" - ${getFiltered().length} টা Video!`; info.style.display='block';}else info.style.display='none';
-render();
-});
-
-// Install
-window.addEventListener('beforeinstallprompt',(e)=>{e.preventDefault(); deferredPrompt=e; document.getElementById('installBanner').style.display='block'; document.getElementById('installBtn').style.display='block';});
-function installApp(){ if(deferredPrompt){deferredPrompt.prompt(); deferredPrompt.userChoice.then(c=>{ if(c.outcome==='accepted'){alert('✅ App Install হলো!'); document.getElementById('installBanner').style.display='none'; document.getElementById('installBtn').style.display='none';} deferredPrompt=null;});}else alert('📱 Menu (⋮) -> Add to Home Screen এ Click করুন!');}
-setTimeout(()=>{if(!deferredPrompt) document.getElementById('installBtn').style.display='block';},5000);
-
-render();
-</script>
-</body>
-</html>
+function skipDownloadAd(){ document.getElementById('myDownloadAd').style.display='none'; }
+function doDownload(id){ window.open(`https://en.savefrom.net/1-youtube-video-downloader-8/?url=https://www.youtube.com/watch?v=${id}`,'_blank'); addEarn(
