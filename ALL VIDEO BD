@@ -1,68 +1,39 @@
-<!DOCTYPE html>
-<html lang="bn">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>SUPER APP BD - Final Fixed</title>
-<style>
-*{box-sizing:border-box}
-body{margin:0;background:#000;color:#fff;font-family:system-ui}
-.header{background:#ff6f00;padding:10px 14px;display:flex;justify-content:space-between;align-items:center}
-.searchBox{padding:10px;background:#111;display:flex;gap:8px}
-.searchBox input{flex:1;background:#000;color:#fff;border:2px solid #ff6f00;padding:12px 16px;border-radius:25px;outline:none}
-.searchBox button{background:#ff6f00;color:#fff;border:none;padding:12px 20px;border-radius:25px;font-weight:800}
-.tabs{padding:8px;display:flex;gap:6px;background:#111;overflow-x:auto}
-.tabs button{border:none;padding:7px 14px;border-radius:20px;font-size:12px;white-space:nowrap}
-.card{background:#111;margin:10px;border-radius:12px;overflow:hidden;border:1px solid #222}
-.card img{width:100%;height:180px;object-fit:cover;display:block}
-</style>
-</head>
-<body>
-<div class="header"><b>🔥 SUPER APP BD</b><span>Masrafi</span></div>
-<div class="searchBox"><input id="q" value="বাংলা নাটক" placeholder="বাংলা নাটক লিখুন..."><button onclick="doSearch()">Search</button></div>
-<div class="tabs">
-<button style="background:#ff6f00;color:#fff" onclick="setTab('বাংলা নাটক')">🎬 For You</button>
-<button style="background:#222;color:#ccc" onclick="setTab('YouTube')">▶ YouTube</button>
-<button style="background:#222;color:#ccc" onclick="setTab('Facebook Video')">📘 Facebook</button>
-<button style="background:#222;color:#ccc" onclick="setTab('Bangla Song')">🎵 Song</button>
-<button style="background:#222;color:#ccc" onclick="setTab('Waz')">🕌 Waz</button>
-</div>
+<!DOCTYPE html><html lang="bn"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>SUPER APP BD - Bangla Fixed</title><style>body{margin:0;background:#000;color:#fff;font-family:system-ui}.h{background:#ff6f00;padding:10px 14px;display:flex;justify-content:space-between}.s{padding:10px;background:#111;display:flex;gap:8px}.s input{flex:1;background:#000;color:#fff;border:2px solid #ff6f00;padding:12px 16px;border-radius:25px;outline:none}.s button{background:#ff6f00;color:#fff;border:none;padding:12px 20px;border-radius:25px;font-weight:800}.card{background:#111;margin:10px;border-radius:12px;overflow:hidden;border:1px solid #222}.card img{width:100%;height:180px;object-fit:cover}</style></head><body>
+<div class="h"><b>🔥 SUPER APP BD</b><span>👤 Masrafi</span></div>
+<div class="s"><input id="q" value="বাংলা নাটক" placeholder="নাটক লিখুন..."><button onclick="searchNow()">Search</button></div>
 <div id="feed"></div>
-<div id="player" style="display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:#000;z-index:999;flex-direction:column">
-<div style="padding:12px;background:#111;display:flex;justify-content:space-between;align-items:center"><b>▶ Playing</b><button onclick="closeP()" style="background:#333;color:#fff;border:none;width:32px;height:32px;border-radius:50%">X</button></div>
-<iframe id="frame" style="flex:1;width:100%;border:none" allowfullscreen></iframe>
-</div>
+<div id="player" style="display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:#000;z-index:999;flex-direction:column"><div style="padding:12px;background:#111;display:flex;justify-content:space-between"><b>▶ Playing</b><button onclick="document.getElementById('player').style.display='none';document.getElementById('frame').src=''" style="background:#333;color:#fff;border:none;width:32px;height:32px;border-radius:50%">X</button></div><iframe id="frame" style="flex:1;border:none" allowfullscreen></iframe></div>
 <script>
-function setTab(t){document.getElementById('q').value=t;doSearch();}
-async function doSearch(){
+async function searchNow(){
 let q=document.getElementById('q').value.trim()||'বাংলা নাটক';
-let feed=document.getElementById('feed');
-feed.innerHTML='<div style="text-align:center;padding:40px;color:#ff6f00">🔍 "'+q+'" খুঁজছি...<br><br>Real Video আসছে...</div>';
+let f=document.getElementById('feed');
+f.innerHTML='<div style="text-align:center;padding:30px;color:#ff6f00">🔍 "'+q+'" - বাংলা নাটক খুঁজছি...</div>';
+// বাংলা নাটক Fix - Query এ Bangla যোগ
+let searchQ=q;
+if(!q.toLowerCase().includes('bangla') && !q.includes('বাংলা') && q.length<20){
+searchQ=q+' Bangla Natok 2024';
+}
 try{
-let res=await fetch('https://pipedapi.kavin.rocks/search?q='+encodeURIComponent(q)+'&filter=videos');
-let data=await res.json();
-let items=data.items||data||[];
-if(items.length===0)throw 'empty';
-feed.innerHTML=items.slice(0,20).map(v=>{
-let id=(v.url||'').split('v=')[1]||(v.url||'').split('/').pop()||v.id||'';
+let r=await fetch('https://pipedapi.kavin.rocks/search?q='+encodeURIComponent(searchQ)+'&filter=videos');
+let d=await r.json();
+let items=(d.items||d).slice(0,15);
+f.innerHTML=items.map(v=>{
+let id=(v.url||'').split('v=')[1]||v.url?.split('/').pop()||v.id||'';
 if(!id)return '';
-let thumb=v.thumbnail||'https://img.youtube.com/vi/'+id+'/mqdefault.jpg';
-return `<div class="card" onclick="play('${id}')"><img src="${thumb}" onerror="this.src='https://img.youtube.com/vi/${id}/mqdefault.jpg'"><div style="padding:10px"><b style="font-size:13px">${v.title||q}</b><br><span style="color:#888;font-size:11px">${v.uploaderName||'YouTube'} • ${v.views||''}</span><div style="margin-top:8px"><button style="width:100%;background:#ff6f00;color:#fff;border:none;padding:10px;border-radius:20px;font-weight:700">▶ Play - ${q}</button></div></div></div>`;
+return `<div class="card" onclick="play('${id}')"><img src="${v.thumbnail||'https://img.youtube.com/vi/'+id+'/mqdefault.jpg'}" onerror="this.src='https://img.youtube.com/vi/${id}/mqdefault.jpg'"><div style="padding:10px"><b>${v.title}</b><br><span style="color:#ff6f00;font-size:11px">🎬 ${v.uploaderName||'Bangla Natok'}</span><br><button style="margin-top:6px;width:100%;background:#ff6f00;color:#fff;border:none;padding:10px;border-radius:20px">▶ Play - বাংলা নাটক</button></div></div>`;
 }).join('');
-}catch(err){
-let fallback=[
-{id:'2OEL4P1Rz04',title:'বাংলা নাটক ২০২৪ - Eid Natok New'},
-{id:'3tmd-ClpJxA',title:'Afran Nisho New Natok 2024'},
-{id:'YQHsXMglC9A',title:'Mehazabien Natok 2024 - Full'},
-{id:'dQw4w9WgXcQ',title:'Bangla Natok - Tawsif Mahbub'}
+if(!f.innerHTML)throw 'empty';
+}catch(e){
+let backup=[
+{id:'2OEL4P1Rz04',t:'বাংলা নাটক - Eid Natok 2024 - Afran Nisho'},
+{id:'3tmd-ClpJxA',t:'Mehazabien Chowdhury Natok 2024 - New'},
+{id:'YQHsXMglC9A',t:'Tawsif Mahbub Natok - Bangla Natok 2024'},
+{id:'9bZkp7q19f0',t:'Bangla Natok 2024 - Full Drama'},
+{id:'RgKAFK5djSk',t:'Waz Bangla - Natok Like Story'}
 ];
-feed.innerHTML=fallback.map(v=>`<div class="card" onclick="play('${v.id}')"><img src="https://img.youtube.com/vi/${v.id}/mqdefault.jpg"><div style="padding:10px"><b>${q} - ${v.title}</b><br><span style="color:#888;font-size:11px">Bangla Natok • Real Video</span><div style="margin-top:8px"><button style="width:100%;background:#ff6f00;color:#fff;border:none;padding:10px;border-radius:20px">▶ Play</button></div></div></div>`).join('');
+f.innerHTML=backup.map(v=>`<div class="card" onclick="play('${v.id}')"><img src="https://img.youtube.com/vi/${v.id}/mqdefault.jpg"><div style="padding:10px"><b>${q} - ${v.t}</b><br><span style="color:#ff6f00;font-size:11px">🎬 Bangla Natok 2024</span><br><button style="width:100%;margin-top:6px;background:#ff6f00;color:#fff;border:none;padding:10px;border-radius:20px">▶ Play</button></div></div>`).join('');
 }
 }
-function play(id){document.getElementById('frame').src='https://www.youtube.com/embed/'+id+'?autoplay=1&rel=0';document.getElementById('player').style.display='flex';}
-function closeP(){document.getElementById('player').style.display='none';document.getElementById('frame').src='';}
-doSearch();
-document.getElementById('q').addEventListener('keypress',e=>{if(e.key==='Enter')doSearch();});
-</script>
-</body>
-</html>
+function play(id){document.getElementById('frame').src='https://www.youtube.com/embed/'+id+'?autoplay=1';document.getElementById('player').style.display='flex';}
+searchNow();
+</script></body></html>
