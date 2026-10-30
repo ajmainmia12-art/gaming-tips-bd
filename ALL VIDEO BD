@@ -2,156 +2,163 @@
 <html lang="bn">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SUPER APP BD - WORLD FINAL</title>
-<meta name="theme-color" content="#f57224">
-<script data-cfasync="false" src="https://dcengg.org/14/92776c0ae48ef75c61957570b3aeb4a5"></script>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>নামাজী বন্ধু - সারা পৃথিবীর Video</title>
 <style>
-*{box-sizing:border-box} body{margin:0;background:#000;color:#fff;font-family:Arial}
-.header{background:#f57224;padding:12px;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:200}
-.cat-bar{display:flex;gap:6px;padding:8px;background:#111;overflow-x:auto;position:sticky;top:48px;z-index:190;white-space:nowrap}
-.cat{background:#222;padding:8px 12px;border-radius:20px;font-size:11px;cursor:pointer;border:1px solid #333}
-.cat.active{background:#f57224;border-color:#f57224}
-.tabs{display:flex;background:#111;padding:6px;gap:5px;overflow-x:auto;position:sticky;top:86px;z-index:180}
-.tab{background:#222;padding:8px 12px;border-radius:20px;cursor:pointer;font-size:11px;font-weight:bold;white-space:nowrap}
-.tab.active{background:#f57224}
-.feed{max-width:500px;margin:0 auto;padding-bottom:80px}
-.card-full{background:#121212;margin:10px;border-radius:15px;overflow:hidden;border:1px solid #222;position:relative}
-.video-wrapper{position:relative;width:100%;height:430px;background:#000}
-.video-wrapper iframe{width:100%;height:100%;border:none}
-.ad-overlay{position:absolute;top:0;left:0;width:100%;height:100%;background:linear-gradient(180deg,#000,#111);z-index:30;display:flex;flex-direction:column;justify-content:center;align-items:center;padding:12px;text-align:center}
-.ad-overlay.hide{display:none}
-.skip-btn{background:#f57224;color:#fff;border:none;padding:10px 18px;border-radius:20px;font-weight:bold;cursor:pointer}
-.skip-btn:disabled{background:#444;color:#aaa}
-.actions{display:flex;gap:6px;padding:10px}
-.act{flex:1;background:#222;padding:8px;border-radius:8px;text-align:center;font-size:11px;cursor:pointer;font-weight:bold}
-.daraz-below{background:#0f0f0f;padding:10px;border-top:1px solid #222}
+body{margin:0;background:#000;color:#fff;font-family:system-ui}
+.header{background:linear-gradient(135deg,#f57224,#ff0000);padding:10px;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:100}
+.scroll-banner{background:linear-gradient(90deg,#f57224,#ff0000,#1877f2,#00c853);padding:8px 0;overflow:hidden;white-space:nowrap}
+.scroll-text{display:inline-block;animation:scroll 20s linear infinite;color:#fff;font-weight:bold;font-size:12px}
+@keyframes scroll{0%{transform:translateX(100%)}100%{transform:translateX(-100%)}}
+.world-notice{background:linear-gradient(135deg,#111,#222);border:2px solid #f57224;padding:12px;border-radius:12px;margin:8px;text-align:center}
+.search-box{padding:8px;background:#000;display:flex;gap:6px;position:sticky;top:48px;z-index:99}
+.search-box input{flex:1;padding:10px;border-radius:20px;border:1px solid #444;background:#222;color:#fff}
+.country-bar{padding:6px 8px;display:flex;gap:5px;overflow-x:auto;background:#111}
+.country-btn{border:none;padding:6px 12px;border-radius:15px;font-size:10px;white-space:nowrap;color:#fff;background:#222;cursor:pointer}
+.country-btn.active{background:#f57224}
+.feed{padding:8px}
+.video-card{background:#111;border-radius:12px;margin-bottom:12px;overflow:hidden;border:1px solid #222}
+.daraz-below{background:#fff;border-radius:0 0 12px 12px;padding:8px}
 .daraz-scroll{display:flex;gap:8px;overflow-x:auto}
-.daraz-item{min-width:110px;background:#1a1a1a;border-radius:10px;overflow:hidden;border:1px solid #333;text-align:center;flex-shrink:0}
-.daraz-item img{width:100%;height:75px;object-fit:cover}
-.daraz-item .buy{background:#f57224;color:#fff;font-size:9px;padding:5px;display:block;text-decoration:none;font-weight:bold}
-.ad-badge{position:absolute;top:8px;left:8px;background:#f57224;padding:4px 8px;border-radius:12px;font-size:9px;z-index:5}
+.daraz-item{min-width:110px;background:#f5f5f5;border-radius:8px;padding:6px;text-align:center}
+.daraz-item img{width:100%;height:75px;border-radius:6px;object-fit:cover}
+.buy{display:block;background:#f57224;color:#fff;padding:4px;border-radius:12px;text-decoration:none;font-size:10px;margin-top:4px}
+.social-box{background:linear-gradient(135deg,#1a1a1a,#000);padding:12px;border-radius:12px;margin:8px;border:1px solid #333}
+.install-banner{display:none;background:linear-gradient(135deg,#f57224,#ff0000);padding:10px;position:fixed;top:0;left:0;right:0;z-index:9999}
+#installBtn{display:none;position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:linear-gradient(135deg,#f57224,#ff0000);color:#fff;border:none;padding:14px 24px;border-radius:30px;font-weight:bold;z-index:9998;box-shadow:0 6px 20px rgba(245,114,36,0.6);animation:jump 2s infinite}
+@keyframes jump{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(-5px)}}
 </style>
 </head>
 <body>
 
-<div id="loginModal" style="position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.95);z-index:99999;display:flex;justify-content:center;align-items:center;padding:20px">
-<div style="background:#121212;padding:20px;border-radius:15px;max-width:330px;width:100%;border:2px solid #f57224;text-align:center">
-<h3 style="color:#f57224;margin:0">🔐 SUPER APP BD WORLD</h3>
-<p style="font-size:11px;color:#aaa">Login করে World Video দেখুন</p>
-<input id="loginName" placeholder="👤 নাম লিখুন" style="width:100%;padding:10px;margin:6px 0;border-radius:8px;background:#222;color:#fff;border:1px solid #333">
-<input id="loginPhone" placeholder="📱 Phone Number" style="width:100%;padding:10px;margin:6px 0;border-radius:8px;background:#222;color:#fff;border:1px solid #333">
-<button onclick="doLogin()" style="width:100%;padding:11px;background:#f57224;color:#fff;border:none;border-radius:8px;font-weight:bold;margin-top:8px">🚀 LOGIN - World Video দেখুন</button>
-<button onclick="guestLogin()" style="width:100%;padding:9px;background:#222;color:#fff;border:1px solid #444;border-radius:8px;margin-top:6px">👤 Guest হিসেবে দেখুন</button>
+<!-- Header -->
+<div class="header">
+<span style="font-weight:bold">🕋 নামাজী বন্ধু</span>
+<div style="display:flex;gap:5px">
+<a href="https://www.youtube.com/@MasrafiIslamBD" target="_blank" style="background:#ff0000;color:#fff;padding:5px 8px;border-radius:15px;text-decoration:none;font-size:9px">🔴 YouTube</a>
+<a href="https://www.facebook.com/search/pages/?q=নামাজী%20বন্ধু" target="_blank" style="background:#1877f2;color:#fff;padding:5px 8px;border-radius:15px;text-decoration:none;font-size:9px">📘 FB Page</a>
 </div>
 </div>
 
-<div class="header"><span>🌍 SUPER APP BD - WORLD</span><span id="userDisplay" onclick="doLogout()" style="font-size:11px;cursor:pointer">👤 Login</span></div>
+<!-- Running Banner -->
+<div class="scroll-banner"><div class="scroll-text">🌍 এখানে সারা পৃথিবীর ভিডিও দেখতে পারবেন! 🇸🇦 Saudi | 🇦🇪 Dubai | 🇧🇩 Bangladesh | 🇬🇧 UK | 🇺🇸 USA | 🇹🇷 Turkey | 🇲🇾 Malaysia | 🇮🇩 Indonesia | 🇶🇦 Qatar | 🔥 World Viral 500+ - সব দেশের Video এক জায়গায়! 📱 নামাজী বন্ধু App Install করুন! 🕋</div></div>
 
-<div class="cat-bar" id="catBar">
-<div class="cat active" onclick="filterCat('all',this)">🌍 All World</div>
-<div class="cat" onclick="filterCat('bd',this)">🇧🇩 BD</div>
-<div class="cat" onclick="filterCat('islamic',this)">🕋 Islamic</div>
-<div class="cat" onclick="filterCat('saudi',this)">🇸🇦 Saudi</div>
-<div class="cat" onclick="filterCat('dubai',this)">🇦🇪 Dubai</div>
-<div class="cat" onclick="filterCat('viral',this)">🔥 Viral</div>
-<div class="cat" onclick="filterCat('funny',this)">😂 Funny</div>
-<div class="cat" onclick="filterCat('uk',this)">🇬🇧 UK</div>
-<div class="cat" onclick="filterCat('usa',this)">🇺🇸 USA</div>
+<!-- Install Banner -->
+<div id="installBanner" class="install-banner">
+<div style="display:flex;justify-content:space-between;align-items:center">
+<div><b style="color:#fff;font-size:12px">📲 App Install করুন!</b><br><span style="color:#fff;font-size:9px">Home Screen এ Add করুন</span></div>
+<div style="display:flex;gap:4px"><button onclick="installApp()" style="background:#fff;color:#f57224;border:none;padding:8px 14px;border-radius:20px;font-weight:bold">📥 Install</button><button onclick="document.getElementById('installBanner').style.display='none'" style="background:rgba(0,0,0,0.3);color:#fff;border:none;padding:6px 10px;border-radius:12px">✕</button></div>
+</div>
 </div>
 
-<div class="tabs">
-<div class="tab active" onclick="switchMainTab('feed',this)">❤️ For You</div>
-<div class="tab" onclick="switchMainTab('trending',this)">🔥 Trending World</div>
-<div class="tab" onclick="switchMainTab('shop',this)">👕 Shop 79% OFF</div>
-<div class="tab" onclick="switchMainTab('upload',this)">📤 Upload</div>
-<div class="tab" onclick="switchMainTab('profile',this)">👤 Profile</div>
+<!-- World Notice -->
+<div class="world-notice">
+<p style="margin:0;color:#f57224;font-weight:bold;font-size:14px">🌍 সারা পৃথিবীর ভিডিও এখানে! 🌍</p>
+<p style="margin:4px 0;color:#fff;font-size:11px">Saudi | Dubai | BD | UK | USA | Turkey | Malaysia | Qatar - সব দেশের Video</p>
+<div style="display:flex;gap:4px;flex-wrap:wrap;justify-content:center;margin-top:6px">
+<span style="background:#f57224;color:#fff;padding:3px 8px;border-radius:12px;font-size:9px">🇸🇦 Saudi 50+</span>
+<span style="background:#ff0000;color:#fff;padding:3px 8px;border-radius:12px;font-size:9px">🇦🇪 Dubai 50+</span>
+<span style="background:#00c853;color:#fff;padding:3px 8px;border-radius:12px;font-size:9px">🇧🇩 BD 100+</span>
+<span style="background:#222;color:#fff;padding:3px 8px;border-radius:12px;font-size:9px">🌍 World 500+</span>
+</div>
 </div>
 
-<div class="feed" id="feed"></div>
-
-<div id="shop" style="display:none;max-width:500px;margin:0 auto;padding:10px">
-<h3 style="color:#f57224;text-align:center">👕 Daraz Shirt Collection - 79% OFF</h3>
-<div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:10px">
-<div style="background:#121212;border-radius:10px;overflow:hidden;border:1px solid #222"><img src="https://via.placeholder.com/200x150/f57224/fff?text=Shirt" style="width:100%;height:120px;object-fit:cover"><div style="padding:6px"><p style="font-size:11px;margin:0">Casual Shirt Premium - ৳299</p><a href="https://s.daraz.com.bd/s.YeIxh?cc" target="_blank" onclick="darazClick()" style="display:block;background:#f57224;color:#fff;padding:6px;border-radius:5px;text-align:center;text-decoration:none;font-size:10px;margin-top:4px">🛒 Buy Now</a></div></div>
-<div style="background:#121212;border-radius:10px;overflow:hidden;border:1px solid #222"><img src="https://via.placeholder.com/200x150/000/fff?text=Panjabi" style="width:100%;height:120px;object-fit:cover"><div style="padding:6px"><p style="font-size:11px;margin:0">Islamic Panjabi - ৳599</p><a href="https://s.daraz.com.bd/s.YeIxh?cc" target="_blank" onclick="darazClick()" style="display:block;background:#f57224;color:#fff;padding:6px;border-radius:5px;text-align:center;text-decoration:none;font-size:10px;margin-top:4px">🛒 Buy Now</a></div></div>
-<div style="background:#121212;border-radius:10px;overflow:hidden;border:1px solid #222"><img src="https://via.placeholder.com/200x150/1877f2/fff?text=Watch" style="width:100%;height:120px;object-fit:cover"><div style="padding:6px"><p style="font-size:11px;margin:0">Smart Watch - ৳899</p><a href="https://s.daraz.com.bd/s.YeIxh?cc" target="_blank" onclick="darazClick()" style="display:block;background:#f57224;color:#fff;padding:6px;border-radius:5px;text-align:center;text-decoration:none;font-size:10px;margin-top:4px">🛒 Buy Now</a></div></div>
-<div style="background:#121212;border-radius:10px;overflow:hidden;border:1px solid #222"><img src="https://via.placeholder.com/200x150/00c853/fff?text=Earphone" style="width:100%;height:120px;object-fit:cover"><div style="padding:6px"><p style="font-size:11px;margin:0">Earphone Bass - ৳249</p><a href="https://s.daraz.com.bd/s.YeIxh?cc" target="_blank" onclick="darazClick()" style="display:block;background:#f57224;color:#fff;padding:6px;border-radius:5px;text-align:center;text-decoration:none;font-size:10px;margin-top:4px">🛒 Buy Now</a></div></div>
+<!-- Search -->
+<div class="search-box">
+<input id="searchInput" placeholder="🔍 যেটা খুঁজবেন লিখুন - waz, gan, Saudi, Dubai, funny...">
+<button onclick="clearSearch()" style="background:#444;color:#fff;border:none;padding:8px 12px;border-radius:15px">❌</button>
 </div>
-<a href="https://s.daraz.com.bd/s.YeIxh?cc" target="_blank" style="display:block;background:#fff;color:#f57224;padding:12px;border-radius:10px;text-align:center;text-decoration:none;font-weight:bold;margin-top:10px;border:1px solid #f57224">🛍️ আরো 100+ Product - Daraz Official</a>
-</div>
-
-<div id="upload" style="display:none;max-width:500px;margin:0 auto;padding:10px">
-<div style="background:#111;padding:14px;border-radius:12px;border:2px dashed #f57224"><h3 style="color:#f57224;text-align:center;margin:0 0 8px 0">📤 Upload - World দেখবে</h3><input type="file" id="upFile" accept="video/*" style="width:100%;padding:8px;background:#222;color:#fff;border-radius:6px"><input type="text" id="upTitle" placeholder="Title - সালারের গল্প" style="width:100%;padding:8px;background:#222;color:#fff;border-radius:6px;margin-top:6px;border:1px solid #444"><button onclick="uploadVideo()" style="width:100%;padding:10px;background:#f57224;color:#fff;border:none;border-radius:8px;font-weight:bold;margin-top:8px">🚀 UPLOAD NOW</button><p style="font-size:9px;color:#888;text-align:center;margin-top:6px">Copyright Safe - আপনার Video</p></div>
+<div class="country-bar">
+<button id="btn-all" class="country-btn active" onclick="filterByCountry('all')">🌍 সব</button>
+<button id="btn-sa" class="country-btn" onclick="filterByCountry('sa')">🇸🇦 Saudi</button>
+<button id="btn-ae" class="country-btn" onclick="filterByCountry('ae')">🇦🇪 Dubai</button>
+<button id="btn-bd" class="country-btn" onclick="filterByCountry('bd')">🇧🇩 BD</button>
+<button id="btn-gb" class="country-btn" onclick="filterByCountry('gb')">🇬🇧 UK</button>
+<button id="btn-us" class="country-btn" onclick="filterByCountry('us')">🇺🇸 USA</button>
+<button id="btn-tr" class="country-btn" onclick="filterByCountry('tr')">🇹🇷 Turkey</button>
 </div>
 
-<div id="profile" style="display:none;max-width:500px;margin:0 auto;padding:10px">
-<div style="background:#111;padding:16px;border-radius:12px;text-align:center"><img src="https://via.placeholder.com/70/f57224/fff?text=M" style="width:70px;height:70px;border-radius:50%"><h3 id="pName">Masrafi</h3><p id="pPhone" style="color:#aaa;font-size:12px">Rajshahi</p><p style="font-size:12px">📹 Total: <span id="totalVideos">0</span> | 💾 Cache: <span id="cacheCount">0</span></p><button onclick="clearCache()" style="width:100%;padding:8px;background:#222;color:#fff;border:1px solid #444;border-radius:6px;margin-top:6px;font-size:11px">🗑️ Clear Cache - Data Save</button><button onclick="doLogout()" style="width:100%;padding:8px;background:#333;color:#fff;border:none;border-radius:6px;margin-top:6px">🚪 Logout</button></div>
-</div>
+<div id="searchInfo" style="display:none;background:#222;padding:8px;border-radius:8px;margin:8px;text-align:center;border:1px solid #f57224"></div>
+<div id="feed" class="feed">Loading...</div>
+
+<button id="installBtn" onclick="installApp()">📲 App Install করুন - 1 Click এ</button>
 
 <script>
-// LOGIN SYSTEM
-let currentUser=localStorage.getItem('superapp_user')?JSON.parse(localStorage.getItem('superapp_user')):null;
-function checkLogin(){if(currentUser){document.getElementById('loginModal').style.display='none';document.getElementById('userDisplay').innerText='👤 '+currentUser.name;document.getElementById('pName').innerText=currentUser.name;document.getElementById('pPhone').innerText=currentUser.phone;}else{document.getElementById('loginModal').style.display='flex';}}
-function doLogin(){let n=document.getElementById('loginName').value;let p=document.getElementById('loginPhone').value;if(!n||!p){alert('নাম+Phone দিন!');return;}currentUser={name:n,phone:p};localStorage.setItem('superapp_user',JSON.stringify(currentUser));checkLogin();window.open('https://demper.org/4/e8283733c30352cb0223ec5729c1cb88','_blank');}
-function guestLogin(){currentUser={name:'Guest',phone:'guest'};localStorage.setItem('superapp_user',JSON.stringify(currentUser));checkLogin();}
-function doLogout(){localStorage.removeItem('superapp_user');location.reload();}
+// ✅ LINKS
+const MY_FB = "https://www.facebook.com/search/pages/?q=নামাজী%20বন্ধু";
+const MY_YT = "https://www.youtube.com/@MasrafiIslamBD";
+const DARAZ = "https://s.daraz.com.bd/s.YeIxh?cc";
 
-// WORLD VIDEOS + 7 FEATURES + DARAZ BELOW
-let WORLD_IDS=["ScMzIvxBSi4","9bZkp7q19f0","kJQP7kiw5Fk","RgKAFK5djSk","OPf0YbXqDm0","09R8_2nJtjg","fRh_vgS2dFE","k2qgadSvNyU","QcIy9NiNbmo","JGw8sBlFBlw","dQw4w9WgXcQ","3JZ_D3ELwOQ"];
-let allVideos=[]; let currentFilter='all'; let mainTab='feed'; let loadedCount=5;
+// ✅ WORLD VIDEOS - 500+ - Sample - আপনার আগের worldVideos Array এখানে বসবে
+let worldVideos = [
+{title:"Saudi Makkah Live - Beautiful Quran", user:"Saudi TV", country:"sa", countryName:"Saudi", category:["saudi","islam","quran"], views:"1.2M"},
+{title:"Dubai Burj Khalifa Viral Video", user:"Dubai Life", country:"ae", countryName:"Dubai", category:["dubai","viral"], views:"500K"},
+{title:"Bangladesh Waz - Mizanur Rahman", user:"Islamic BD", country:"bd", countryName:"BD", category:["bd","islam","waz"], views:"2M"},
+{title:"Turkey Islamic History", user:"Turkey TV", country:"tr", countryName:"Turkey", category:["turkey","islam"], views:"800K"},
+{title:"Funny Video World Viral", user:"Funny World", country:"us", countryName:"USA", category:["funny","viral"], views:"5M"},
+];
 
-function buildVideos(){
-let saved=JSON.parse(localStorage.getItem('allVideos')||'[]');
-let world=WORLD_IDS.map((id,i)=>{
-let cats=[['bd','islamic'],['saudi','islamic'],['dubai','viral'],['uk','viral'],['usa','funny'],['bd','funny'],['bd','viral'],['saudi','viral'],['dubai','islamic'],['uk','islamic'],['usa','bd'],['bd','saudi']][i];
-return {title:[`সততার পুরস্কার সালার - BD Viral 🇧🇩`,`Saudi Islamic Story - মক্কা 🕋🇸🇦`,`Dubai Rich Man - UAE 🇦🇪`,`UK Bangladesh Viral 🇬🇧`,`USA Islamic - Viral 🇺🇸`,`Funny Video - হাসির গল্প 😂`,`Turkey Islamic Story 🇹🇷`,`Qatar World Cup BD 🇶🇦`,`Malaysia Islamic 🇲🇾`,`Pakistan Story 🇵🇰`,`Indonesia Viral 🇮🇩`,`India Funny 😂`][i],user:`@user${i+1}`,src:`https://www.youtube.com/embed/${id}`,likes:Math.floor(Math.random()*5000)+100,comments:["মাশাআল্লাহ ❤️","Nice"],category:cats,country:cats[0],isWorld:i>1,views:Math.floor(Math.random()*10000)+500}
-});
-allVideos=[...saved,...world];
-}
+let loadedCount = 6;
+let searchText = "";
+let selectedCountry = "all";
+let deferredPrompt = null;
 
 function getFiltered(){
-let f=allVideos;
-if(currentFilter!='all'){f=f.filter(v=>v.category.includes(currentFilter));}
-if(mainTab=='trending'){f=f.filter(v=>v.isWorld);}
-if(mainTab=='feed'){f=f.sort(()=>0.5-Math.random());}
+let all = [...worldVideos];
+let saved = JSON.parse(localStorage.getItem('allVideos')||'[]');
+all = [...saved, ...all];
+let f = all;
+if(searchText){
+f = f.filter(v=>{
+let t=(v.title||'').toLowerCase(), u=(v.user||'').toLowerCase(), c=(v.category||[]).join(' ').toLowerCase(), co=(v.country||'').toLowerCase();
+return t.includes(searchText)||u.includes(searchText)||c.includes(searchText)||co.includes(searchText);
+});
+}
+if(selectedCountry!=='all'){
+f = f.filter(v=> v.country===selectedCountry || v.category.includes(selectedCountry));
+}
 return f;
 }
 
-function adHtml(i){return `<div class="ad-overlay" id="ad-${i}"><div style="font-size:40px">🔥</div><h3 style="color:#f57224;margin:4px 0">SUPER APP BD</h3><p style="color:#fff;font-size:11px;margin:0">Masrafi BD - World Video</p><div style="background:#fff;color:#000;padding:10px;border-radius:10px;width:90%;max-width:280px;margin:8px 0"><p style="margin:0;font-weight:bold;font-size:12px;color:#f57224">🛒 Daraz 79% OFF Today!</p><p style="margin:4px 0;font-size:10px;color:#333">Shirt, Watch, Earphone - ৳299 থেকে</p><a href="https://s.daraz.com.bd/s.YeIxh?cc" target="_blank" onclick="darazClick()" style="display:block;background:#f57224;color:#fff;padding:7px;border-radius:6px;text-decoration:none;font-weight:bold;font-size:11px">🛒 এখনই কিনুন</a></div><button class="skip-btn" id="skip-${i}" disabled>⏳ <span id="cnt-${i}">5</span>s Skip Ad</button></div>`;}
-
-function darazBelowHtml(){return `<div class="daraz-below"><div style="display:flex;justify-content:space-between;margin-bottom:6px"><b style="color:#f57224;font-size:11px">🛒 এই Video এর নিচে - Daraz Product</b><span style="font-size:8px;background:#222;padding:3px 6px;border-radius:10px">79% OFF</span></div><div class="daraz-scroll"><div class="daraz-item"><img src="https://via.placeholder.com/110x75/f57224/fff?text=Shirt"><p style="font-size:10px;margin:2px">Shirt ৳299</p><a href="https://s.daraz.com.bd/s.YeIxh?cc" target="_blank" class="buy" onclick="darazClick()">🛒 কিনুন</a></div><div class="daraz-item"><img src="https://via.placeholder.com/110x75/000/fff?text=Panjabi"><p style="font-size:10px;margin:2px">Panjabi ৳599</p><a href="https://s.daraz.com.bd/s.YeIxh?cc" target="_blank" class="buy" onclick="darazClick()">🛒 কিনুন</a></div><div class="daraz-item"><img src="https://via.placeholder.com/110x75/1877f2/fff?text=Watch"><p style="font-size:10px;margin:2px">Watch ৳899</p><a href="https://s.daraz.com.bd/s.YeIxh?cc" target="_blank" class="buy" onclick="darazClick()">🛒 কিনুন</a></div><div class="daraz-item"><img src="https://via.placeholder.com/110x75/00c853/fff?text=Earphone"><p style="font-size:10px;margin:2px">Earphone ৳249</p><a href="https://s.daraz.com.bd/s.YeIxh?cc" target="_blank" class="buy" onclick="darazClick()">🛒 কিনুন</a></div></div></div>`;}
-
-function darazClick(){window.open('https://s.daraz.com.bd/s.YeIxh?cc','_blank');window.open('https://demper.org/4/e8283733c30352cb0223ec5729c1cb88','_blank');}
-
-function render(){
-let list=getFiltered(); let show=list.slice(0,loadedCount);
-let feed=document.getElementById('feed'); feed.innerHTML="";
-show.forEach((v,i)=>{
-feed.innerHTML+=`<div class="card-full"><div class="ad-badge">${v.country.toUpperCase()} ${v.isWorld?'WORLD':''}</div><div style="display:flex;justify-content:space-between;align-items:center;padding:8px"><div style="display:flex;gap:6px;align-items:center"><img src="https://via.placeholder.com/30/f57224/fff?text=${v.user[1]}" style="width:30px;height:30px;border-radius:50%"><div><b style="font-size:12px">${v.user}</b><br><span style="font-size:9px;color:#aaa">${v.country} • ${v.views} views</span></div></div><span onclick="reportVideo(${i})" style="cursor:pointer;font-size:14px">🚩</span></div><div class="video-wrapper">${adHtml(i)}<iframe src="${v.src}" allowfullscreen loading="lazy"></iframe></div><div style="padding:10px"><p style="margin:0;font-size:13px"><b>${v.title}</b></p><div class="actions"><div class="act" onclick="likeVideo(${i})">❤️ ${v.likes}</div><div class="act" onclick="toggleCmt(${i})">💬 ${v.comments.length}</div><div class="act" onclick="shareV('${v.title}')">↗️ Share</div></div><div id="cbox-${i}" style="display:none;background:#1a1a1a;padding:8px;border-radius:8px;margin-top:6px"><div style="display:flex;gap:5px"><input id="cin-${i}" placeholder="Comment লিখুন..." style="flex:1;padding:6px;border-radius:12px;border:1px solid #333;background:#222;color:#fff;font-size:11px"><button onclick="addCmt(${i})" style="background:#f57224;color:#fff;border:none;border-radius:12px;padding:5px 10px;font-size:11px">Send</button></div><div id="clist-${i}" style="font-size:11px;color:#aaa;margin-top:5px">${v.comments.map(c=>`• ${c}<br>`).join('')}</div></div></div>${darazBelowHtml()}</div>`;
-setTimeout(()=>{let c=5;let s=document.getElementById(`skip-${i}`);let cnt=document.getElementById(`cnt-${i}`);let ad=document.getElementById(`ad-${i}`);if(!s)return;let t=setInterval(()=>{c--;if(cnt)cnt.innerText=c;if(c<=0){s.innerText='✅ Skip Ad';s.disabled=false;s.style.background='#00c853';s.onclick=()=>ad.classList.add('hide');clearInterval(t);}},1000);},400);
-});
-if(list.length>loadedCount){feed.innerHTML+=`<button onclick="loadMore()" style="width:100%;padding:12px;background:#222;color:#fff;border:1px solid #444;border-radius:10px;margin:10px 0;font-weight:bold">⬇️ আরো ${list.length-loadedCount} টা Video Load করুন - Lazy Load</button>`;}
-document.getElementById('totalVideos').innerText=allVideos.length;
-let cache=JSON.parse(localStorage.getItem('videoCache')||'[]');
-document.getElementById('cacheCount').innerText=cache.length;
-let toCache=list.slice(0,3).map(v=>v.src);
-localStorage.setItem('videoCache',JSON.stringify([...new Set([...cache,...toCache])]));
+function socialHtml(){
+return `<div class="social-box"><div style="text-align:center;margin-bottom:8px"><b style="color:#fff;font-size:13px">🕋 নামাজী বন্ধু - Follow করুন</b></div><div style="display:flex;gap:6px"><a href="${MY_YT}" target="_blank" onclick="adClick()" style="flex:1;background:#ff0000;color:#fff;padding:10px;border-radius:20px;text-decoration:none;font-weight:bold;font-size:11px;text-align:center">🔴 YouTube<br><span style="font-size:8px">@MasrafiIslamBD</span></a><a href="${MY_FB}" target="_blank" onclick="adClick()" style="flex:1;background:#1877f2;color:#fff;padding:10px;border-radius:20px;text-decoration:none;font-weight:bold;font-size:11px;text-align:center">📘 Facebook<br><span style="font-size:8px">নামাজী বন্ধু</span></a></div></div>`;
 }
 
-function loadMore(){loadedCount+=5;render();}
-function filterCat(cat,el){currentFilter=cat;document.querySelectorAll('.cat').forEach(c=>c.classList.remove('active'));el.classList.add('active');loadedCount=5;render();}
-function switchMainTab(tab,el){mainTab=tab;document.querySelectorAll('.tabs .tab').forEach(t=>t.classList.remove('active'));el.classList.add('active');['feed','shop','upload','profile'].forEach(x=>{let d=document.getElementById(x);if(d)d.style.display='none';});if(tab=='feed'||tab=='trending'){document.getElementById('feed').style.display='block';loadedCount=5;render();}else{document.getElementById(tab).style.display='block';}}
-function reportVideo(i){if(confirm('⚠️ Report করবেন? খারাপ Video?')){alert('✅ Report Success! 24h এ Check করবো।');window.open('https://demper.org/4/e8283733c30352cb0223ec5729c1cb88','_blank');}}
-function toggleCmt(i){let b=document.getElementById(`cbox-${i}`);b.style.display=b.style.display=='block'?'none':'block';}
-function likeVideo(i){if(!currentUser||currentUser.name=='Guest'){alert('Login করুন!');document.getElementById('loginModal').style.display='flex';return;}allVideos[i].likes++;render();window.open('https://demper.org/4/e8283733c30352cb0223ec5729c1cb88','_blank');}
-function addCmt(i){let inp=document.getElementById(`cin-${i}`);if(!inp.value)return;allVideos[i].comments.push(currentUser.name+': '+inp.value);inp.value='';render();}
-function shareV(t){if(navigator.share)navigator.share({title:t,url:location.href});else prompt("Copy:",location.href);}
-function uploadVideo(){if(!currentUser||currentUser.name=='Guest'){alert('Login করুন!');document.getElementById('loginModal').style.display='flex';return;}let f=document.getElementById('upFile').files[0];let title=document.getElementById('upTitle').value;if(!f){alert('Video Select করুন!');return;}let r=new FileReader();r.onload=(e)=>{let nv={title:title||'New by '+currentUser.name,user:'@'+currentUser.name,src:e.target.result,likes:0,comments:[],category:['bd'],country:'bd',isWorld:false,views:0};let saved=JSON.parse(localStorage.getItem('allVideos')||'[]');saved.unshift(nv);localStorage.setItem('allVideos',JSON.stringify(saved));buildVideos();render();alert('✅ Upload Success! World দেখবে!');};r.readAsDataURL(f);}
-function clearCache(){localStorage.removeItem('videoCache');alert('✅ Cache Clear!');render();}
+function darazHtml(){
+return `<div style="display:flex;justify-content:space-between;margin:8px 0 6px 0"><b style="color:#f57224;font-size:11px">🛒 Daraz Product</b></div><div class="daraz-scroll"><div class="daraz-item"><img src="https://via.placeholder.com/110x75/f57224/fff?text=Shirt"><p style="font-size:10px">Shirt ৳299</p><a href="${DARAZ}" target="_blank" class="buy" onclick="adClick()">🛒 কিনুন</a></div><div class="daraz-item"><img src="https://via.placeholder.com/110x75/000/fff?text=Panjabi"><p style="font-size:10px">Panjabi ৳599</p><a href="${DARAZ}" target="_blank" class="buy" onclick="adClick()">🛒 কিনুন</a></div><div class="daraz-item"><img src="https://via.placeholder.com/110x75/1877f2/fff?text=Watch"><p style="font-size:10px">Watch ৳899</p><a href="${DARAZ}" target="_blank" class="buy" onclick="adClick()">🛒 কিনুন</a></div></div>`;
+}
 
-// INIT
-buildVideos(); checkLogin(); render();
+function render(){
+let list = getFiltered();
+let feed = document.getElementById('feed');
+let show = list.slice(0,loadedCount);
+feed.innerHTML = show.map(v=>`<div class="video-card"><div style="padding:10px"><b style="font-size:13px">${v.title}</b><br><span style="font-size:10px;color:#aaa">👤 ${v.user} | 🌍 ${v.countryName||v.country} | 👁 ${v.views||'1K'}</span></div>${socialHtml()}<div class="daraz-below">${darazHtml()}</div></div>`).join('') + (list.length>loadedCount?`<button onclick="loadedCount+=6;render()" style="width:100%;background:#f57224;color:#fff;border:none;padding:12px;border-radius:20px;font-weight:bold;margin-top:8px">🔽 আরও Video দেখুন - ${list.length-loadedCount} টা বাকি</button>`:'');
+}
+
+function filterByCountry(code){
+selectedCountry=code; loadedCount=6;
+document.querySelectorAll('.country-btn').forEach(b=>b.classList.remove('active'));
+document.getElementById('btn-'+code).classList.add('active');
+render();
+}
+
+function clearSearch(){document.getElementById('searchInput').value=''; searchText=''; document.getElementById('searchInfo').style.display='none'; render();}
+
+function adClick(){ window.open('https://demper.org/4/e8283733c30352cb0223ec5729c1cb88','_blank'); }
+
+document.getElementById('searchInput').addEventListener('input',(e)=>{
+searchText=e.target.value.toLowerCase().trim(); loadedCount=6;
+let info=document.getElementById('searchInfo');
+if(searchText){info.innerHTML=`🔍 "<b style="color:#f57224">${searchText}</b>" - ${getFiltered().length} টা Video!`; info.style.display='block';}else info.style.display='none';
+render();
+});
+
+// Install
+window.addEventListener('beforeinstallprompt',(e)=>{e.preventDefault(); deferredPrompt=e; document.getElementById('installBanner').style.display='block'; document.getElementById('installBtn').style.display='block';});
+function installApp(){ if(deferredPrompt){deferredPrompt.prompt(); deferredPrompt.userChoice.then(c=>{ if(c.outcome==='accepted'){alert('✅ App Install হলো!'); document.getElementById('installBanner').style.display='none'; document.getElementById('installBtn').style.display='none';} deferredPrompt=null;});}else alert('📱 Menu (⋮) -> Add to Home Screen এ Click করুন!');}
+setTimeout(()=>{if(!deferredPrompt) document.getElementById('installBtn').style.display='block';},5000);
+
+render();
 </script>
 </body>
 </html>
