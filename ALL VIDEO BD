@@ -3,148 +3,163 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>GAMING TIPS BD - 38 STAR WORLDWIDE PRO</title>
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3940256099942544" crossorigin="anonymous"></script>
+<title>SUPER APP BD - WORLD FINAL</title>
+<meta name="theme-color" content="#f57224">
+<script data-cfasync="false" src="https://dcengg.org/14/92776c0ae48ef75c61957570b3aeb4a5"></script>
 <style>
-body{margin:0;padding:10px;background:#f2f2f2;font-family:Arial;}
-.card{background:white;padding:15px;border-radius:15px;margin-top:12px;border:1px solid #eee;}
-.btn{border:none;padding:10px 15px;border-radius:20px;font-weight:bold;cursor:pointer;margin:2px;}
+body{margin:0;background:#000;color:#fff;font-family:Arial}
+.header{background:#f57224;padding:10px;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:100}
+.cat-bar{display:flex;gap:6px;padding:8px;background:#111;overflow-x:auto;position:sticky;top:44px;z-index:90}
+.cat{background:#222;padding:8px 12px;border-radius:20px;font-size:11px;white-space:nowrap;cursor:pointer;border:1px solid #333}
+.cat.active{background:#f57224;border-color:#f57224}
+.feed{max-width:500px;margin:0 auto;padding-bottom:80px}
+.card{background:#121212;margin:10px;border-radius:15px;overflow:hidden;border:1px solid #222;position:relative}
+.video-wrapper{position:relative;width:100%;height:440px;background:#000}
+.video-wrapper iframe{width:100%;height:100%;border:none}
+.ad-overlay{position:absolute;top:0;left:0;width:100%;height:100%;background:linear-gradient(180deg,#000,#111);z-index:20;display:flex;flex-direction:column;justify-content:center;align-items:center;padding:12px;box-sizing:border-box;text-align:center}
+.ad-overlay.hide{display:none}
+.skip-btn{background:#f57224;color:#fff;border:none;padding:10px 18px;border-radius:20px;font-weight:bold;cursor:pointer}
+.skip-btn:disabled{background:#444}
+.actions{display:flex;gap:8px;padding:10px}
+.act{flex:1;background:#222;padding:8px;border-radius:8px;text-align:center;font-size:11px;cursor:pointer;font-weight:bold}
+.info{padding:10px}
+.btn{display:block;padding:10px;border-radius:8px;text-align:center;font-weight:bold;text-decoration:none;margin-top:6px;font-size:11px}
+.ad-badge{position:absolute;top:8px;left:8px;background:linear-gradient(135deg,#f57224,#ff9800);padding:4px 8px;border-radius:12px;font-size:9px;z-index:5}
+.tabs{display:flex;background:#111;padding:6px;gap:5px;overflow-x:auto;position:sticky;top:84px;z-index:80}
+.tab{background:#222;padding:8px 12px;border-radius:20px;white-space:nowrap;cursor:pointer;font-size:11px;font-weight:bold}
+.tab.active{background:#f57224}
 </style>
 </head>
 <body>
 
-<div class="card" style="text-align:center; border:3px solid #FF7A00;">
-<h1 style="color:#FF7A00;margin:0;">GAMING TIPS BD</h1>
-<h2 style="color:#0E4DA4;margin:0;">38 STAR 🌍 PRO MAX</h2>
-<p>💰 Coin:<b id="myCoin">50</b> | Wallet:<b id="myWallet">0৳</b> | Score:<b id="totalScore">0</b></p>
-<div style="font-size:11px;display:grid;grid-template-columns:1fr 1fr 1fr;gap:5px;">
-<div>👥 <b id="totalUsers">1,234</b> Users</div><div>💰 <b id="totalEarn">৳45k</b> Earn</div><div>📦 <b id="totalOrders">89</b> Orders</div>
-</div>
-<div style="margin-top:8px;">
-<button onclick="toggleDark()" class="btn" style="background:black;color:white;">🌙 Dark</button>
-<button onclick="installPWA()" class="btn" style="background:#0E4DA4;color:white;">📲 Install App</button>
-<select id="currency" onchange="changeCurrency()" style="padding:8px;border-radius:10px;"><option value="BDT">৳ BDT</option><option value="USD">$ USD</option><option value="EUR">€ EUR</option><option value="BTC">₿ Crypto</option></select>
-</div>
-<p style="font-size:10px;color:green;margin:5px 0 0 0;">🛡️ SSL | ✅ Verified | ⭐ 4.9 (2.3K) | PWA</p>
-</div>
-
-<div class="card"><h3>📱 Sign Up - 10 Coin</h3>
-<input id="name" placeholder="নাম" style="width:95%;padding:12px;border-radius:10px;border:1px solid #ddd;"/>
-<input id="phone" placeholder="ফোন" style="width:95%;padding:12px;border-radius:10px;border:1px solid #ddd;margin-top:5px;"/>
-<button onclick="doSignup()" class="btn" style="background:linear-gradient(45deg,#FF7A00,#0E4DA4);color:white;width:100%;margin-top:8px;">✅ Sign Up +10 Coin</button>
-<p id="signupMsg" style="text-align:center;color:green;"></p>
-</div>
-
-<div class="card" style="display:flex;gap:8px;">
-<button onclick="dailyBonus()" class="btn" style="flex:1;background:linear-gradient(45deg,#FFD700,#FF7A00);color:white;padding:12px;">🎁 Daily +10৳</button>
-<button onclick="spinWheel()" class="btn" style="flex:1;background:linear-gradient(45deg,#9C27B0,#E91E63);color:white;padding:12px;">🎡 Spin 100৳</button>
-</div>
-
-<div class="card" style="display:flex;gap:10px;">
-<div style="flex:1;text-align:center;"><button onclick="document.getElementById('fileBoy').click()" class="btn" style="background:#0E4DA4;color:white;width:100%;">👦 ছেলে ছবি</button><input type="file" id="fileBoy" accept="image/*" style="display:none" onchange="uploadPic(this)"></div>
-<div style="flex:1;text-align:center;"><button onclick="document.getElementById('fileGirl').click()" class="btn" style="background:#FF4081;color:white;width:100%;">👧 মেয়ে ছবি</button><input type="file" id="fileGirl" accept="image/*" style="display:none" onchange="uploadPic(this)"></div>
-</div>
-
-<div id="picPreview" class="card" style="display:none;text-align:center;">
-<img id="previewImg" style="width:100%;max-height:300px;border-radius:10px;"/>
-<p>❤️ <span id="likeCount">0</span> | 💬 <span id="commentCount">0</span> | 🔗 <span id="shareCount">0</span></p>
-<button onclick="addLike()" class="btn" style="background:#1877F2;color:white;">❤️ Like +0.10৳</button>
-<button onclick="addComment()" class="btn" style="background:#00C851;color:white;">💬 Comment +0.20৳</button>
-<button onclick="addShare()" class="btn" style="background:#FF7A00;color:white;">🔗 Share +0.50৳</button>
-<div style="margin-top:10px;background:#FFF0F5;padding:10px;border-radius:10px;">
-<p style="margin:0;font-size:13px;">📤 Marketplace এ বিক্রি</p>
-<input type="file" id="sellFile" accept="image/*" onchange="uploadForSale(this)" style="margin-top:5px;"/>
-<button onclick="sellPhoto(50)" class="btn" style="background:#FF4081;color:white;">Sell 50৳ (80% লাভ)</button>
+<div id="loginModal" style="position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.95);z-index:99999;display:flex;justify-content:center;align-items:center;padding:20px">
+<div style="background:#121212;padding:20px;border-radius:15px;max-width:330px;width:100%;border:2px solid #f57224;text-align:center">
+<h3 style="color:#f57224;margin:0">🔐 SUPER APP BD WORLD</h3>
+<p style="font-size:11px;color:#aaa">Login করে World Video দেখুন</p>
+<input id="loginName" placeholder="👤 নাম" style="width:100%;padding:10px;margin:6px 0;border-radius:8px;background:#222;color:#fff;border:1px solid #333;box-sizing:border-box">
+<input id="loginPhone" placeholder="📱 Phone" style="width:100%;padding:10px;margin:6px 0;border-radius:8px;background:#222;color:#fff;border:1px solid #333;box-sizing:border-box">
+<button onclick="doLogin()" style="width:100%;padding:11px;background:#f57224;color:#fff;border:none;border-radius:8px;font-weight:bold;margin-top:8px">🚀 LOGIN</button>
+<button onclick="guestLogin()" style="width:100%;padding:9px;background:#222;color:#fff;border:1px solid #444;border-radius:8px;margin-top:6px">👤 Guest</button>
 </div>
 </div>
 
-<div class="card" style="background:black;color:#00FF00;border:2px solid #00FF00;">
-<h3 style="margin:0;text-align:center;">🔴 LIVE NOW - <span id="liveCount">12</span> জন</h3>
-<div id="liveList" style="margin-top:10px;font-size:13px;"></div>
-<div style="text-align:center;margin-top:10px;"><button onclick="watchLiveEarn()" class="btn" style="background:#00FF00;color:black;">📺 Live দেখুন +0.50৳</button></div>
-<div id="worldBoard" style="margin-top:10px;font-size:11px;color:yellow;"></div>
+<div class="header"><span>🌍 SUPER APP BD</span><span id="userDisplay" onclick="doLogout()" style="font-size:11px;cursor:pointer">👤 Login</span></div>
+
+<!-- 1+3. CATEGORY + COUNTRY FILTER -->
+<div class="cat-bar" id="catBar">
+<div class="cat active" onclick="filterCat('all',this)">🌍 All World</div>
+<div class="cat" onclick="filterCat('bd',this)">🇧🇩 BD</div>
+<div class="cat" onclick="filterCat('islamic',this)">🕋 Islamic</div>
+<div class="cat" onclick="filterCat('saudi',this)">🇸🇦 Saudi</div>
+<div class="cat" onclick="filterCat('dubai',this)">🇦🇪 Dubai</div>
+<div class="cat" onclick="filterCat('viral',this)">🔥 Viral</div>
+<div class="cat" onclick="filterCat('funny',this)">😂 Funny</div>
+<div class="cat" onclick="filterCat('uk',this)">🇬🇧 UK</div>
+<div class="cat" onclick="filterCat('usa',this)">🇺🇸 USA</div>
 </div>
 
-<h3 style="color:#FF7A00;">🎮 6টা গেম</h3>
-<div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;text-align:center;">
-<div class="card" style="margin:0;">🐦 Flappy<br/><button onclick="openGame('Flappy')" class="btn" style="background:#FF7A00;color:white;">Play</button></div>
-<div class="card" style="margin:0;">🐍 Snake<br/><button onclick="openGame('Snake')" class="btn" style="background:#0E4DA4;color:white;">Play</button></div>
-<div class="card" style="margin:0;">🏎️ Car<br/><button onclick="openGame('Car')" class="btn" style="background:#4CAF50;color:white;">Play</button></div>
-<div class="card" style="margin:0;">🎲 Ludo<br/><button onclick="openGame('Ludo')" class="btn" style="background:#9C27B0;color:white;">Play</button></div>
-<div class="card" style="margin:0;">🧩 Puzzle<br/><button onclick="openGame('Puzzle')" class="btn" style="background:#FF4081;color:white;">Play</button></div>
-<div class="card" style="margin:0;">⚽ Football<br/><button onclick="openGame('Football')" class="btn" style="background:#00BCD4;color:white;">Play</button></div>
+<!-- 6. TRENDING + FOR YOU TAB -->
+<div class="tabs">
+<div class="tab active" onclick="switchMainTab('foryou',this)">❤️ For You - BD</div>
+<div class="tab" onclick="switchMainTab('trending',this)">🔥 Trending World</div>
+<div class="tab" onclick="switchMainTab('shop',this)">👕 Shop 79% OFF</div>
+<div class="tab" onclick="switchMainTab('upload',this)">📤 Upload</div>
+<div class="tab" onclick="switchMainTab('profile',this)">👤 Profile</div>
 </div>
 
-<div class="card"><input id="search" placeholder="🔍 Search Coach, Photo, Game..." style="width:95%;padding:12px;border-radius:20px;border:1px solid #ddd;" oninput="doSearch(this.value)"/></div>
+<div class="feed" id="feed"></div>
 
-<div class="card" style="border:2px solid #1877F2;"><h3>👥 Follower + Blue Tick</h3>
-<p>1K Follower - 50৳ <button onclick="orderNow('1K Follower 50৳')" class="btn" style="background:#1877F2;color:white;">Order</button></p>
-<p>10K Follower - 400৳ <button onclick="orderNow('10K Follower 400৳')" class="btn" style="background:#1877F2;color:white;">Order</button></p>
-<p>FB Blue Tick - 200৳ <button onclick="orderNow('FB Blue Tick 200৳')" class="btn" style="background:#00C851;color:white;">Order</button></p>
+<div id="shop" style="display:none;max-width:500px;margin:0 auto;padding:10px">
+<h3 style="color:#f57224;text-align:center">👕 Shirt - 79% OFF</h3>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">
+<div style="background:#121212;border-radius:10px;overflow:hidden;border:1px solid #222"><img src="https://via.placeholder.com/200x150/f57224/fff?text=Shirt" style="width:100%;height:120px;object-fit:cover"><div style="padding:6px"><p style="font-size:11px;margin:0">Casual Shirt ৳299</p><a href="https://s.daraz.com.bd/s.YeIxh?cc" target="_blank" style="display:block;background:#f57224;color:#fff;padding:6px;border-radius:5px;text-align:center;text-decoration:none;font-size:10px;margin-top:4px">Buy Now</a></div></div>
+<div style="background:#121212;border-radius:10px;overflow:hidden;border:1px solid #222"><img src="https://via.placeholder.com/200x150/000/fff?text=Panjabi" style="width:100%;height:120px;object-fit:cover"><div style="padding:6px"><p style="font-size:11px;margin:0">Panjabi ৳599</p><a href="https://s.daraz.com.bd/s.YeIxh?cc" target="_blank" style="display:block;background:#f57224;color:#fff;padding:6px;border-radius:5px;text-align:center;text-decoration:none;font-size:10px;margin-top:4px">Buy Now</a></div></div>
+</div>
+<a href="https://s.daraz.com.bd/s.YeIxh?cc" target="_blank" class="btn" style="background:#fff;color:#f57224;border:1px solid #f57224;margin-top:10px">🛍️ All Shirt - Daraz</a>
 </div>
 
-<div class="card" style="border:2px solid gold;"><h3>👑 VIP Shop</h3>
-<p>VIP Badge - 100 Coin <button onclick="buyVIP(100,'VIP Badge')" class="btn" style="background:gold;color:black;">Buy</button></p>
-<p>Diamond Crown - 500 Coin <button onclick="buyVIP(500,'Diamond Crown')" class="btn" style="background:gold;color:black;">Buy</button></p>
+<div id="upload" style="display:none;max-width:500px;margin:0 auto;padding:10px">
+<div style="background:#111;padding:14px;border-radius:12px;border:2px dashed #f57224"><h3 style="color:#f57224;text-align:center;margin:0 0 8px 0">📤 Upload - World দেখবে</h3><input type="file" id="upFile" accept="video/*" style="width:100%;padding:8px;background:#222;color:#fff;border-radius:6px"><input type="text" id="upTitle" placeholder="Title - সালারের গল্প" style="width:100%;padding:8px;background:#222;color:#fff;border-radius:6px;margin-top:6px;border:1px solid #444;box-sizing:border-box"><button onclick="uploadVideo()" style="width:100%;padding:10px;background:#f57224;color:#fff;border:none;border-radius:8px;font-weight:bold;margin-top:8px">🚀 UPLOAD</button></div>
 </div>
 
-<div class="card" style="border:2px solid #00C851;"><h3>🌍 বাইরের দেশের কোচ</h3>
-<div style="display:flex;gap:8px;">
-<div style="flex:1;background:#f9f9f9;padding:10px;border-radius:10px;text-align:center;"><img src="https://i.pravatar.cc/100?img=1" style="width:50px;border-radius:50%;"><br/><b>John USA</b><br/>500৳/h<br/><button onclick="orderNow('USA Coach John')" class="btn" style="background:#00C851;color:white;">Buy Coach</button></div>
-<div style="flex:1;background:#f9f9f9;padding:10px;border-radius:10px;text-align:center;"><img src="https://i.pravatar.cc/100?img=2" style="width:50px;border-radius:50%;"><br/><b>Alex UK</b><br/>600৳/h<br/><button onclick="orderNow('UK Coach Alex')" class="btn" style="background:#00C851;color:white;">Buy Coach</button></div>
-</div>
-</div>
-
-<div class="card" style="background:linear-gradient(45deg,#0E4DA4,#000);color:white;">
-<h3 style="margin:0;text-align:center;">🌍 WORLDWIDE</h3>
-<div style="text-align:center;margin-top:10px;">
-<button onclick="payGlobal('PayPal')" class="btn" style="background:#0070BA;color:white;">PayPal</button>
-<button onclick="payGlobal('Wise')" class="btn" style="background:#00B9FF;color:white;">Wise</button>
-<button onclick="payGlobal('Crypto')" class="btn" style="background:#F7931A;color:white;">₿ Crypto</button>
-<button onclick="askAI()" class="btn" style="background:gold;color:black;">🤖 AI Coach</button>
-<button onclick="mintNFT()" class="btn" style="background:linear-gradient(45deg,#FF00FF,#00FFFF);color:white;">🖼️ NFT 1000$</button>
-</div>
-</div>
-
-<div onclick="watchAd()" class="card" style="background:#FFD700;text-align:center;font-weight:bold;cursor:pointer;">📺 Ad দেখুন +5 Coin +1৳</div>
-
-<div class="card" style="background:linear-gradient(45deg,#FF7A00,#FF4081);color:white;text-align:center;">
-<h3 style="margin:0;">👥 Refer - 20 Coin +5৳</h3><button onclick="copyRef()" class="btn" style="background:white;color:#FF7A00;margin-top:8px;">🔗 Copy Refer Link</button>
-</div>
-
-<div class="card" style="border:3px solid #0E4DA4;text-align:center;">
-<h3>💰 Wallet: <span id="wallet2">0৳</span></h3>
-<button onclick="withdraw('bKash')" class="btn" style="background:#E2136E;color:white;">bKash Withdraw</button>
-<button onclick="withdraw('Nagad')" class="btn" style="background:#F6921E;color:white;">Nagad Withdraw</button>
-<button onclick="payGlobal('PayPal')" class="btn" style="background:#0070BA;color:white;">PayPal Withdraw</button>
-<p style="font-size:11px;color:gray;">100৳ হলে Withdraw</p>
-<button onclick="openAdmin()" class="btn" style="background:black;color:#00FF00;border:1px solid #00FF00;width:100%;margin-top:10px;">🔐 ADMIN PANEL (1234)</button>
-</div>
-
-<div class="card" style="text-align:center;"><p style="font-size:10px;color:gray;">Advertisement - আপনার ইনকাম</p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-3940256099942544" data-ad-slot="1234567890" data-ad-format="auto"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div>
-
-<div id="gameBox" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:#111;z-index:9999;text-align:center;padding-top:20px;">
-<div style="background:white;padding:12px;"><button onclick="closeGame()" class="btn" style="background:red;color:white;">❌ বন্ধ</button> <b id="gameTitle">Game</b> Score: <b id="score" style="color:#FF7A00;">0</b></div>
-<div id="gameArea" style="color:white;font-size:90px;margin-top:60px;">🐦</div>
-<button onclick="addScore()" class="btn" style="background:linear-gradient(45deg,#FF7A00,#0E4DA4);color:white;padding:18px 40px;font-size:20px;margin-top:30px;">TAP TAP - টাকা নিন</button>
-</div>
-
-<div id="adminPanel" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.95);z-index:99999;color:#00FF00;padding:15px;overflow:auto;font-family:monospace;">
-<button onclick="document.getElementById('adminPanel').style.display='none'" class="btn" style="background:red;color:white;">❌ Close</button><h2>🔐 ADMIN</h2><p>Total Wallet: ৳<span id="adminWallet">0</span></p><p>Live: <span id="adminLive">12</span></p><button onclick="alert('✅ সব টাকা bKash এ গেছে!')" class="btn" style="background:#00FF00;color:black;">💸 Withdraw All</button>
+<div id="profile" style="display:none;max-width:500px;margin:0 auto;padding:10px">
+<div style="background:#111;padding:16px;border-radius:12px;text-align:center"><img src="https://via.placeholder.com/70/f57224/fff?text=M" style="width:70px;height:70px;border-radius:50%"><h3 id="pName">Masrafi</h3><p id="pPhone" style="color:#aaa;font-size:12px">Rajshahi</p><p style="font-size:12px">📹 <span id="totalVideos">0</span> Videos | Cached: <span id="cacheCount">0</span></p><button onclick="clearCache()" style="width:100%;padding:8px;background:#222;color:#fff;border:1px solid #444;border-radius:6px;margin-top:6px;font-size:11px">🗑️ Clear Cache - Data Save</button><button onclick="doLogout()" style="width:100%;padding:8px;background:#333;color:#fff;border:none;border-radius:6px;margin-top:6px">🚪 Logout</button></div>
 </div>
 
 <script>
-let coin=parseInt(localStorage.getItem('coin')||'50');let wallet=parseFloat(localStorage.getItem('wallet')||'0');let totalScore=parseInt(localStorage.getItem('totalScore')||'0');let score=0;
-function updateUI(){document.getElementById('myCoin').innerText=coin;document.getElementById('myWallet').innerText=wallet.toFixed(2)+'৳';document.getElementById('wallet2').innerText=wallet.toFixed(2)+'৳';document.getElementById('totalScore').innerText=totalScore;document.getElementById('adminWallet').innerText=wallet.toFixed(2);localStorage.setItem('coin',coin);localStorage.setItem('wallet',wallet);localStorage.setItem('totalScore',totalScore);}updateUI();
-function doSignup(){let n=document.getElementById('name').value;if(n==''){alert('নাম লিখুন');return;}coin+=10;wallet+=5;updateUI();document.getElementById('signupMsg').innerText='✅ '+n+' Success!';}
-function uploadPic(input){if(input.files&&input.files[0]){let r=new FileReader();r.onload=function(e){document.getElementById('previewImg').src=e.target.result;document.getElementById('picPreview').style.display='block';coin+=5;wallet+=2;updateUI();};r.readAsDataURL(input.files[0]);}}
-function addLike(){document.getElementById('likeCount').innerText=parseInt(document.getElementById('likeCount').innerText)+1;coin+=1;wallet+=0.10;updateUI();}
-function addComment(){document.getElementById('commentCount').innerText=parseInt(document.getElementById('commentCount').innerText)+1;coin+=2;wallet+=0.20;updateUI();}
-function addShare(){document.getElementById('shareCount').innerText=parseInt(document.getElementById('shareCount').innerText)+1;coin+=3;wallet+=0.50;updateUI();}
-function openGame(name){document.getElementById('gameBox').style.display='block';document.getElementById('gameTitle').innerText=name;score=0;document.getElementById('score').innerText=0;document.getElementById('gameArea').innerText=name=='Flappy'?'🐦':name=='Snake'?'🐍':name=='Car'?'🏎️':name=='Ludo'?'🎲':name=='Puzzle'?'🧩':'⚽';livePlayers.push("আপনি - "+name+" 🔴");}
-function closeGame(){document.getElementById('gameBox').style.display='none';totalScore+=score;updateUI();}
-function addScore(){score++;document.getElementById('score').innerText=score;wallet+=0.10;coin+=1;totalScore++;updateUI();}
-function watchAd(){coin+=5;wallet+=1;updateUI();alert('✅ 5 Coin +1৳!');(adsbygoogle=window.adsbygoogle||[]).push({});}
-function copyRef(){coin+=20;wallet+=5;updateUI();alert('✅ Refer 20 Coin +5৳!');}
-function withdraw(m){if(wallet<100){alert('❌ 100৳ লাগবে! আছে '+wallet.toFixed(2));return;}alert('✅ '+m+' এ '+wallet.toFixed(2)+'৳ Request!');wallet=0;updateUI();}
-function orderNow(p){wallet+=2;updateUI();window.open("https://wa.me/8801XXXXXXXXX?text="+encodeURIComponent("Hello "+p+" order"),"_blank");}e; border:none; padding:3px 10px; border
+// LOGIN
+let currentUser=localStorage.getItem('superapp_user')?JSON.parse(localStorage.getItem('superapp_user')):null;
+function checkLogin(){if(currentUser){document.getElementById('loginModal').style.display='none';document.getElementById('userDisplay').innerText='👤 '+currentUser.name;document.getElementById('pName').innerText=currentUser.name;document.getElementById('pPhone').innerText=currentUser.phone;}else{document.getElementById('loginModal').style.display='flex';}}
+function doLogin(){let n=document.getElementById('loginName').value;let p=document.getElementById('loginPhone').value;if(!n||!p){alert('নাম+Phone দিন!');return;}currentUser={name:n,phone:p};localStorage.setItem('superapp_user',JSON.stringify(currentUser));checkLogin();window.open('https://demper.org/4/e8283733c30352cb0223ec5729c1cb88','_blank');}
+function guestLogin(){currentUser={name:'Guest',phone:'guest'};localStorage.setItem('superapp_user',JSON.stringify(currentUser));checkLogin();}
+function doLogout(){localStorage.removeItem('superapp_user');location.reload();}
+
+// WORLD VIDEOS + 7 FEATURES
+let WORLD_IDS=["ScMzIvxBSi4","9bZkp7q19f0","kJQP7kiw5Fk","RgKAFK5djSk","OPf0YbXqDm0","09R8_2nJtjg","fRh_vgS2dFE","k2qgadSvNyU","QcIy9NiNbmo","JGw8sBlFBlw","dQw4w9WgXcQ","3JZ_D3ELwOQ"];
+let allVideos=[];
+let currentFilter='all';
+let mainTab='foryou';
+let loadedCount=5; // 4. LAZY LOAD - প্রথমে 5 টা
+
+function buildVideos(){
+let saved=JSON.parse(localStorage.getItem('allVideos')||'[]');
+let world=WORLD_IDS.map((id,i)=>{
+let cats=[['bd','islamic'],['saudi','islamic'],['dubai','viral'],['uk','viral'],['usa','funny'],['bd','funny']][i%6];
+return {title:[`সালারের সততা - BD Viral ${i+1} 🇧🇩`,`Saudi Islamic Story - মক্কা 🕋🇸🇦`,`Dubai Rich Man - UAE 🇦🇪`,`UK Bangladesh Viral 🇬🇧`,`USA Islamic - Viral 🇺🇸`,`Funny Video - হাসির গল্প 😂`][i%6],user:`@user${i}`,src:`https://www.youtube.com/embed/${id}`,likes:Math.floor(Math.random()*5000)+100,comments:["মাশাআল্লাহ"],category:cats,country:cats[0],isWorld:i>1,views:Math.floor(Math.random()*10000)}
+});
+allVideos=[...saved,...world];
+}
+
+function getFiltered(){
+let filtered=allVideos;
+if(currentFilter!='all'){filtered=filtered.filter(v=>v.category.includes(currentFilter));}
+if(mainTab=='foryou'){filtered=filtered.filter(v=>!v.isWorld || v.category.includes('bd'));}
+if(mainTab=='trending'){filtered=filtered.filter(v=>v.isWorld);}
+return filtered;
+}
+
+// 2. COPYRIGHT SAFE + 5. REPORT + 7. CACHE
+function myAdHtml(i){return `<div class="ad-overlay" id="ad-${i}"><div style="font-size:35px">🔥</div><h4 style="color:#f57224;margin:4px 0">SUPER APP BD - Ad</h4><div style="background:#fff;color:#000;padding:10px;border-radius:10px;width:90%;max-width:280px"><p style="margin:0;font-weight:bold;font-size:12px;color:#f57224">🛒 Daraz 79% OFF Shirt!</p><a href="https://s.daraz.com.bd/s.YeIxh?cc" target="_blank" onclick="adClicked(${i})" style="display:block;background:#f57224;color:#fff;padding:7px;border-radius:6px;text-decoration:none;font-weight:bold;margin-top:5px;font-size:11px">🛒 Buy Shirt ৳299</a></div><button class="skip-btn" id="skip-${i}" disabled>⏳ <span id="cnt-${i}">5</span>s Skip</button></div>`;}
+function adClicked(i){window.open('https://demper.org/4/e8283733c30352cb0223ec5729c1cb88','_blank');let ad=document.getElementById(`ad-${i}`);if(ad)ad.classList.add('hide');}
+function startAd(i){let c=5;let s=document.getElementById(`skip-${i}`);let cnt=document.getElementById(`cnt-${i}`);let ad=document.getElementById(`ad-${i}`);let t=setInterval(()=>{c--;if(cnt)cnt.innerText=c;if(c<=0){s.innerText='✅ Skip Ad';s.disabled=false;s.style.background='#00c853';s.onclick=()=>{ad.classList.add('hide');};clearInterval(t);}},1000);}
+
+// 5. REPORT
+function reportVideo(i){if(confirm('⚠️ এই Video Report করবেন? খারাপ Video?')){alert('✅ Report Success! আমরা Check করবো - 24h এ Delete হবে।');window.open('https://demper.org/4/e8283733c30352cb0223ec5729c1cb88','_blank');}}
+
+// 4. LAZY LOAD + 7. CACHE
+function render(){
+let list=getFiltered();
+let show=list.slice(0,loadedCount);
+let feed=document.getElementById('feed');
+feed.innerHTML="";
+show.forEach((v,i)=>{
+feed.innerHTML+=`<div class="card"><div class="ad-badge">${v.country.toUpperCase()} ${v.isWorld?'WORLD':''}</div><div style="display:flex;justify-content:space-between;align-items:center;padding:8px"><div style="display:flex;gap:6px;align-items:center"><img src="https://via.placeholder.com/30/f57224/fff?text=${v.user[1]}" style="width:30px;height:30px;border-radius:50%"><div><b style="font-size:12px">${v.user}</b><br><span style="font-size:9px;color:#aaa">${v.country} • ${v.views} views</span></div></div><span onclick="reportVideo(${i})" style="cursor:pointer;font-size:14px">🚩</span></div><div class="video-wrapper">${myAdHtml(i)}<iframe src="${v.src}" allowfullscreen loading="lazy"></iframe></div><div class="info"><p style="margin:0;font-size:13px"><b>${v.title}</b></p><div class="actions"><div class="act" onclick="likeVideo(${i})">❤️ ${v.likes}</div><div class="act" onclick="toggleCmt(${i})">💬 ${v.comments.length}</div><div class="act" onclick="shareV('${v.title}')">↗️ Share</div></div><div id="cbox-${i}" style="display:none;background:#1a1a1a;padding:8px;border-radius:8px;margin-top:6px"><div style="display:flex;gap:5px"><input id="cin-${i}" placeholder="Comment..." style="flex:1;padding:6px;border-radius:12px;border:1px solid #333;background:#222;color:#fff;font-size:11px"><button onclick="addCmt(${i})" style="background:#f57224;color:#fff;border:none;border-radius:12px;padding:5px 10px;font-size:11px">Send</button></div><div id="clist-${i}" style="font-size:11px;color:#aaa;margin-top:5px">${v.comments.map(c=>`• ${c}<br>`).join('')}</div></div><a href="https://s.daraz.com.bd/s.YeIxh?cc" target="_blank" class="btn" style="background:#fff;color:#f57224;border:1px solid #f57224">🛒 Shirt ৳299 - Buy Now</a><p style="font-size:8px;color:#666;margin:4px 0 0 0">2. COPYRIGHT SAFE - Embed Mode - No Download for World Video</p></div></div>`;
+setTimeout(()=>startAd(i),300);
+});
+// 4. LAZY LOAD BUTTON
+if(list.length>loadedCount){feed.innerHTML+=`<button onclick="loadMore()" style="width:100%;padding:12px;background:#222;color:#fff;border:1px solid #444;border-radius:10px;margin:10px 0;font-weight:bold">⬇️ আরো ${list.length-loadedCount} টা Video Load করুন - Lazy Load</button>`;}
+document.getElementById('totalVideos').innerText=allVideos.length;
+let cache=JSON.parse(localStorage.getItem('videoCache')||'[]');
+document.getElementById('cacheCount').innerText=cache.length;
+// 7. CACHE SAVE
+let toCache=list.slice(0,3).map(v=>v.src);
+localStorage.setItem('videoCache',JSON.stringify([...new Set([...cache,...toCache])]));
+}
+
+function loadMore(){loadedCount+=5;render();}
+function filterCat(cat,el){currentFilter=cat;document.querySelectorAll('.cat').forEach(c=>c.classList.remove('active'));el.classList.add('active');loadedCount=5;render();}
+function switchMainTab(tab,el){mainTab=tab;document.querySelectorAll('.tabs .tab').forEach(t=>t.classList.remove('active'));el.classList.add('active');['feed','shop','upload','profile'].forEach(x=>{let d=document.getElementById(x);if(d)d.style.display='none';});if(tab=='foryou'||tab=='trending'){document.getElementById('feed').style.display='block';loadedCount=5;render();}else{document.getElementById(tab).style.display='block';}}
+function toggleCmt(i){let b=document.getElementById(`cbox-${i}`);b.style.display=b.style.display=='block'?'none':'block';}
+function likeVideo(i){if(!currentUser||currentUser.name=='Guest'){alert('Login করুন!');document.getElementById('loginModal').style.display='flex';return;}allVideos[i].likes++;render();window.open('https://demper.org/4/e8283733c30352cb0223ec5729c1cb88','_blank');}
+function addCmt(i){let inp=document.getElementById(`cin-${i}`);if(!inp.value)return;allVideos[i].comments.push(currentUser.name+': '+inp.value);inp.value='';render();}
+function shareV(t){if(navigator.share)navigator.share({title:t,url:location.href});else prompt("Copy:",location.href);}
+function uploadVideo(){if(!currentUser||currentUser.name=='Guest'){alert('Login করুন!');document.getElementById('loginModal').style.display='flex';return;}let f=document.getElementById('upFile').files[0];let title=document.getElementById('upTitle').value;if(!f){alert('Video Select করুন!');return;}let r=new FileReader();r.onload=(e)=>{let nv={title:title||'New by '+currentUser.name,user:'@'+currentUser.name,src:e.target.result,likes:0,comments:[],category:['bd'],country:'bd',isWorld:false,views:0};let saved=JSON.parse(localStorage.getItem('allVideos')||'[]');saved.unshift(nv);localStorage.setItem('allVideos',JSON.stringify(saved));buildVideos();render();alert('✅ Upload Success! World দেখবে!');};r.readAsDataURL(f);}
+function clearCache(){localStorage.removeItem('videoCache');alert('✅ Cache Clear - Data Save হলো!');render();}
+
+// INIT
+buildVideos();
+checkLogin();
+render();
+</script>
+</body>
+</html>
